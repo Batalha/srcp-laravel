@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\srcp;
 
+use App\Models\srcp\Cliente;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $dados = \App\Models\srcp\Cliente::all();
+        $dados = Cliente::all();
         return $dados;
     }
 
@@ -36,7 +37,8 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      return Cliente::create($request->all());
     }
 
     /**

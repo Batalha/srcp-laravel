@@ -33,7 +33,8 @@ var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var home_component_1 = __webpack_require__("./src/app/home/home.component.ts");
 var route = [
-    { path: 'srcp', component: home_component_1.HomeComponent }
+    { path: 'home', component: home_component_1.HomeComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -112,9 +113,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var app_component_1 = __webpack_require__("./src/app/app.component.ts");
-var cliente_module_1 = __webpack_require__("./src/app/cliente/cliente.module.ts");
 var app_routing_module_1 = __webpack_require__("./src/app/app-routing.module.ts");
+var cliente_module_1 = __webpack_require__("./src/app/cliente/cliente.module.ts");
 var home_component_1 = __webpack_require__("./src/app/home/home.component.ts");
+var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -127,6 +129,7 @@ var AppModule = /** @class */ (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
+                http_1.HttpClientModule,
                 cliente_module_1.ClienteModule
             ],
             providers: [],
@@ -191,6 +194,7 @@ var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var common_1 = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var list_component_1 = __webpack_require__("./src/app/cliente/list/list.component.ts");
 var cliente_routing_module_1 = __webpack_require__("./src/app/cliente/cliente-routing.module.ts");
+var cliente_service_1 = __webpack_require__("./src/app/cliente/cliente.service.ts");
 var ClienteModule = /** @class */ (function () {
     function ClienteModule() {
     }
@@ -202,7 +206,8 @@ var ClienteModule = /** @class */ (function () {
             imports: [
                 common_1.CommonModule,
                 cliente_routing_module_1.ClienteRoutingModule
-            ]
+            ],
+            providers: [cliente_service_1.ClienteService]
         })
     ], ClienteModule);
     return ClienteModule;
@@ -212,17 +217,53 @@ exports.ClienteModule = ClienteModule;
 
 /***/ }),
 
+/***/ "./src/app/cliente/cliente.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var ClienteService = /** @class */ (function () {
+    function ClienteService(http) {
+        this.http = http;
+        this.url = 'http://localhost:8000/srcp/cliente';
+    }
+    ClienteService.prototype.getClienteList = function () {
+        return this.http.get(this.url);
+    };
+    ClienteService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient])
+    ], ClienteService);
+    return ClienteService;
+}());
+exports.ClienteService = ClienteService;
+
+
+/***/ }),
+
 /***/ "./src/app/cliente/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  list works!\r\n</p>\r\n"
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row-fluid\">\r\n        <button class=\"btn btn-success\"><img src=\"js/assets/svg/si-glyph-person-plus.svg\"/> Adicionar </button>\r\n        <div class=\"card bg-light\">\r\n            <div class=\"card-header\">Clientes</div>\r\n            <div class=\"card-body\">\r\n                <table class=\"table table-bordered table-hover\">\r\n                    <thead>\r\n                    <tr>\r\n                        <th>#</th>\r\n                        <th>Nome</th>\r\n                        <th>CPF/CNPJ</th>\r\n                        <!--<th>Telefone</th>-->\r\n                        <th>Celular</th>\r\n                        <th>Email</th>\r\n                        <!--<th>Endereco</th>-->\r\n                        <!--<th>numero</th>-->\r\n                        <!--<th>Bairro</th>-->\r\n                        <!--<th>Cidade</th>-->\r\n                        <!--<th>Estado</th>-->\r\n                    </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                    <tr *ngFor=\"let cliente of listCliente\">\r\n                        <td>{{cliente.id}}</td>\r\n                        <td>{{cliente.nome}}</td>\r\n                        <td>{{cliente.cpf_cnpj}}</td>\r\n                        <!--<td>{{cliente.telefone}}</td>-->\r\n                        <td>{{cliente.celular}}</td>\r\n                        <td>{{cliente.email}}</td>\r\n                        <!--<td>{{cliente.endereco}}</td>-->\r\n                        <!--<td>{{cliente.numero}}</td>-->\r\n                        <!--<td>{{cliente.bairro}}</td>-->\r\n                        <!--<td>{{cliente.cidade}}</td>-->\r\n                        <!--<td>{{cliente.estado}}</td>-->\r\n                    </tr>\r\n                    </tbody>\r\n                </table>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ "./src/app/cliente/list/list.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "body {\n  font-family: \"Helvetica Neue\", Helvetica, Roboto, Arial, sans-serif; }\n\n.container-fluid .row-fluid {\n  margin-top: 20px; }\n\n.table {\n  padding: 0;\n  margin: 0; }\n\n.table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    border-bottom: none;\n    background-color: #F0F1F2;\n    padding: .60rem; }\n\n.table tr td {\n    font-size: 12px; }\n\n.card {\n  border-bottom: none; }\n\n.card-header {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  border-bottom: none;\n  padding: .60rem 1.25rem; }\n\n.card-body {\n  padding: 0;\n  border-bottom: none; }\n\nimg {\n  width: 16px;\n  height: 16px;\n  color: #EEEEEE;\n  fill: #eee; }\n\nsi-glyph-person-plus {\n  fill: blue; }\n"
 
 /***/ }),
 
@@ -242,10 +283,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var cliente_service_1 = __webpack_require__("./src/app/cliente/cliente.service.ts");
 var ListComponent = /** @class */ (function () {
-    function ListComponent() {
+    function ListComponent(clienteService) {
+        this.clienteService = clienteService;
+        this.listCliente = [];
     }
     ListComponent.prototype.ngOnInit = function () {
+        this.getClienteList();
+    };
+    ListComponent.prototype.getClienteList = function () {
+        var _this = this;
+        this.clienteService.getClienteList().subscribe(function (data) {
+            _this.listCliente = data;
+        });
     };
     ListComponent = __decorate([
         core_1.Component({
@@ -253,7 +304,7 @@ var ListComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/cliente/list/list.component.html"),
             styles: [__webpack_require__("./src/app/cliente/list/list.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [cliente_service_1.ClienteService])
     ], ListComponent);
     return ListComponent;
 }());
@@ -265,7 +316,7 @@ exports.ListComponent = ListComponent;
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  home works!\r\n</p>\r\n"
+module.exports = "<h1>Testando Home</h1>\n\n<button routerLink=\"/srcp/cliente\">Clientes</button>"
 
 /***/ }),
 
