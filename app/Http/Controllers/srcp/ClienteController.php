@@ -60,7 +60,9 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+
+//        dd(Cliente::find($id));
+        return Cliente::find($id);
     }
 
     /**
