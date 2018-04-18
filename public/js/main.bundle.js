@@ -158,8 +158,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var list_component_1 = __webpack_require__("./src/app/cliente/list/list.component.ts");
+var new_component_1 = __webpack_require__("./src/app/cliente/new/new.component.ts");
 var clienteRoute = [
     { path: 'srcp/cliente', component: list_component_1.ListComponent },
+    { path: 'srcp/cliente/new', component: new_component_1.NewComponent }
 ];
 var ClienteRoutingModule = /** @class */ (function () {
     function ClienteRoutingModule() {
@@ -195,17 +197,21 @@ var common_1 = __webpack_require__("./node_modules/@angular/common/esm5/common.j
 var list_component_1 = __webpack_require__("./src/app/cliente/list/list.component.ts");
 var cliente_routing_module_1 = __webpack_require__("./src/app/cliente/cliente-routing.module.ts");
 var cliente_service_1 = __webpack_require__("./src/app/cliente/cliente.service.ts");
+var new_component_1 = __webpack_require__("./src/app/cliente/new/new.component.ts");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var ClienteModule = /** @class */ (function () {
     function ClienteModule() {
     }
     ClienteModule = __decorate([
         core_1.NgModule({
             declarations: [
-                list_component_1.ListComponent
+                list_component_1.ListComponent,
+                new_component_1.NewComponent
             ],
             imports: [
                 common_1.CommonModule,
-                cliente_routing_module_1.ClienteRoutingModule
+                cliente_routing_module_1.ClienteRoutingModule,
+                forms_1.FormsModule
             ],
             providers: [cliente_service_1.ClienteService]
         })
@@ -256,14 +262,14 @@ exports.ClienteService = ClienteService;
 /***/ "./src/app/cliente/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row-fluid\">\r\n        <button class=\"btn btn-success\"><img src=\"js/assets/svg/si-glyph-person-plus.svg\"/> Adicionar </button>\r\n        <div class=\"card bg-light\">\r\n            <div class=\"card-header\">Clientes</div>\r\n            <div class=\"card-body\">\r\n                <table class=\"table table-bordered table-hover\">\r\n                    <thead>\r\n                    <tr>\r\n                        <th>#</th>\r\n                        <th>Nome</th>\r\n                        <th>CPF/CNPJ</th>\r\n                        <!--<th>Telefone</th>-->\r\n                        <th>Celular</th>\r\n                        <th>Email</th>\r\n                        <!--<th>Endereco</th>-->\r\n                        <!--<th>numero</th>-->\r\n                        <!--<th>Bairro</th>-->\r\n                        <!--<th>Cidade</th>-->\r\n                        <!--<th>Estado</th>-->\r\n                    </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                    <tr *ngFor=\"let cliente of listCliente\">\r\n                        <td>{{cliente.id}}</td>\r\n                        <td>{{cliente.nome}}</td>\r\n                        <td>{{cliente.cpf_cnpj}}</td>\r\n                        <!--<td>{{cliente.telefone}}</td>-->\r\n                        <td>{{cliente.celular}}</td>\r\n                        <td>{{cliente.email}}</td>\r\n                        <!--<td>{{cliente.endereco}}</td>-->\r\n                        <!--<td>{{cliente.numero}}</td>-->\r\n                        <!--<td>{{cliente.bairro}}</td>-->\r\n                        <!--<td>{{cliente.cidade}}</td>-->\r\n                        <!--<td>{{cliente.estado}}</td>-->\r\n                    </tr>\r\n                    </tbody>\r\n                </table>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row-fluid\">\r\n        <button class=\"btn btn-success\" routerLink=\"/srcp/cliente/new\"><img src=\"js/assets/svg/si-glyph-person-plus.svg\"/> Novo Cliente </button>\r\n        <div class=\"card bg-light\">\r\n            <div class=\"card-header\">Clientes</div>\r\n            <div class=\"card-body\">\r\n                <table class=\"table table-bordered table-hover\">\r\n                    <thead>\r\n                    <tr>\r\n                        <th>#</th>\r\n                        <th>Nome</th>\r\n                        <th>CPF/CNPJ</th>\r\n                        <!--<th>Telefone</th>-->\r\n                        <th>Celular</th>\r\n                        <th>Email</th>\r\n                        <!--<th>Endereco</th>-->\r\n                        <!--<th>numero</th>-->\r\n                        <!--<th>Bairro</th>-->\r\n                        <!--<th>Cidade</th>-->\r\n                        <!--<th>Estado</th>-->\r\n                    </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                    <tr *ngFor=\"let cliente of listCliente\">\r\n                        <td>{{cliente.id}}</td>\r\n                        <td>{{cliente.nome}}</td>\r\n                        <td>{{cliente.cpf_cnpj}}</td>\r\n                        <!--<td>{{cliente.telefone}}</td>-->\r\n                        <td>{{cliente.celular}}</td>\r\n                        <td>{{cliente.email}}</td>\r\n                        <!--<td>{{cliente.endereco}}</td>-->\r\n                        <!--<td>{{cliente.numero}}</td>-->\r\n                        <!--<td>{{cliente.bairro}}</td>-->\r\n                        <!--<td>{{cliente.cidade}}</td>-->\r\n                        <!--<td>{{cliente.estado}}</td>-->\r\n                    </tr>\r\n                    </tbody>\r\n                </table>\r\n\r\n            </div>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ "./src/app/cliente/list/list.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "body {\n  font-family: \"Helvetica Neue\", Helvetica, Roboto, Arial, sans-serif; }\n\n.container-fluid .row-fluid {\n  margin-top: 20px; }\n\n.table {\n  padding: 0;\n  margin: 0; }\n\n.table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    border-bottom: none;\n    background-color: #F0F1F2;\n    padding: .60rem; }\n\n.table tr td {\n    font-size: 12px; }\n\n.card {\n  border-bottom: none; }\n\n.card-header {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  border-bottom: none;\n  padding: .60rem 1.25rem; }\n\n.card-body {\n  padding: 0;\n  border-bottom: none; }\n\nimg {\n  width: 16px;\n  height: 16px;\n  color: #EEEEEE;\n  fill: #eee; }\n\nsi-glyph-person-plus {\n  fill: blue; }\n"
+module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Helvetica, Roboto, Arial, sans-serif; }\n\n.table {\n  padding: 0;\n  margin: 0; }\n\n.table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    border-bottom: none;\n    background-color: #F0F1F2;\n    padding: .60rem; }\n\n.table tr td {\n    font-size: 12px; }\n\n.card {\n  margin-top: 20px;\n  border-bottom: none; }\n\n.card-header {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  border-bottom: none;\n  padding: .60rem 1.25rem; }\n\n.card-body {\n  padding: 0;\n  border-bottom: none; }\n"
 
 /***/ }),
 
@@ -313,10 +319,64 @@ exports.ListComponent = ListComponent;
 
 /***/ }),
 
+/***/ "./src/app/cliente/new/new.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid\">\n    <div class=\"row-fluid\">\n        <form action=\"\">\n            <div class=\"card bg-light\">\n                <div class=\"card-header\">Novo Cliente</div>\n                <div class=\"card-body\">\n                    <div class=\"row\">\n                        <div class=\"form-group col-lg-4\">\n                            <label for=\"\">Nome</label>\n                            <input class=\"form-control\" type=\"text\" name=\"nome\" [(ngModel)]=\"cliente.nome\">\n                        </div>\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">CPF/CNPJ</label>\n                            <input class=\"form-control\" type=\"text\" name=\"cpf_cnpj\" [(ngModel)]=\"cliente.cpf_cnpj\">\n                        </div>\n                    </div>\n                    <div class=\"row\">\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Email</label>\n                            <input class=\"form-control\" type=\"text\" name=\"email\" [(ngModel)]=\"cliente.email\">\n                        </div>\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Telefone</label>\n                            <input class=\"form-control\" type=\"text\" name=\"telefone\" [(ngModel)]=\"cliente.telefone\">\n                        </div>\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Celular</label>\n                            <input class=\"form-control\" type=\"text\" name=\"celular\" [(ngModel)]=\"cliente.celular\">\n                        </div>\n                    </div>\n                    <div class=\"row\">\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">CEP</label>\n                            <input class=\"form-control\" type=\"text\" name=\"cep\" [(ngModel)]=\"cliente.cep\">\n                        </div>\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Endereço</label>\n                            <input class=\"form-control\" type=\"text\" name=\"endereco\" [(ngModel)]=\"cliente.endereco\">\n                        </div>\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Numero</label>\n                            <input class=\"form-control\" type=\"text\" name=\"numero\" [(ngModel)]=\"cliente.numero\">\n                        </div>\n                    </div>\n                    <div class=\"row\">\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Bairro</label>\n                            <input class=\"form-control\" type=\"text\" name=\"bairro\" [(ngModel)]=\"cliente.bairro\">\n                        </div>\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Cidade</label>\n                            <input class=\"form-control\" type=\"text\" name=\"cidade\" [(ngModel)]=\"cliente.cidade\">\n                        </div>\n                        <div class=\"form-group col-lg-2\">\n                            <label for=\"\">Estado</label>\n                            <input class=\"form-control\" type=\"text\" name=\"estado\" [(ngModel)]=\"cliente.estado\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <button class=\"btn btn-success\" (click)=\"save()\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/> Salvar Cliente</button>\n            <button class=\"btn btn-default\" routerLink=\"/srcp/cliente\"><img src=\"js/assets/svg/si-glyph-backward-page.svg\"/> Voltar</button>\n        </form>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/cliente/new/new.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".card {\n  margin-top: 20px;\n  margin-bottom: 20px; }\n\n.card-header {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  padding: .60rem 1.25rem; }\n"
+
+/***/ }),
+
+/***/ "./src/app/cliente/new/new.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var NewComponent = /** @class */ (function () {
+    function NewComponent() {
+        this.cliente = {
+            nome: '',
+            cpf_cnpj: ''
+        };
+    }
+    NewComponent.prototype.ngOnInit = function () {
+    };
+    NewComponent = __decorate([
+        core_1.Component({
+            selector: 'app-new',
+            template: __webpack_require__("./src/app/cliente/new/new.component.html"),
+            styles: [__webpack_require__("./src/app/cliente/new/new.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], NewComponent);
+    return NewComponent;
+}());
+exports.NewComponent = NewComponent;
+
+
+/***/ }),
+
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Testando Home</h1>\n\n<button routerLink=\"/srcp/cliente\">Clientes</button>"
+module.exports = "<h1>Testando Home</h1>\r\n\r\n<button routerLink=\"/srcp/cliente\">Clientes</button>"
 
 /***/ }),
 
