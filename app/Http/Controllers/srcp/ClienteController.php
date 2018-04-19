@@ -5,6 +5,7 @@ namespace App\Http\Controllers\srcp;
 use App\Models\srcp\Cliente;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 
 class ClienteController extends Controller
 {
@@ -61,8 +62,8 @@ class ClienteController extends Controller
     public function edit($id)
     {
 
-//        dd(Cliente::find($id));
-        return Cliente::find($id);
+        $data = Cliente::find($id);
+        return $data;
     }
 
     /**
@@ -72,9 +73,10 @@ class ClienteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cliente $cliente)
     {
-        //
+        $cliente->update($request->all());
+        return $cliente;
     }
 
     /**
