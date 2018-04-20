@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::group(['prefix' => 'srcp'], function (){
     Route::resource('cliente', 'srcp\ClienteController');
 });
+
+
+Route::get('/home', 'HomeController@index')->name('home');

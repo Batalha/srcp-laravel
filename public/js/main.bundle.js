@@ -31,10 +31,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var home_component_1 = __webpack_require__("./src/app/home/home.component.ts");
+var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
 var route = [
-    { path: 'home', component: home_component_1.HomeComponent },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'login', component: login_component_1.LoginComponent },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -56,7 +56,7 @@ exports.AppRoutingModule = AppRoutingModule;
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<router-outlet></router-outlet>\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<nav class=\"navbar navbar-dark bg-dark\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\r\n        Bootstrap\r\n    </a>\r\n</nav>\r\n\r\n<router-outlet></router-outlet>\r\n\r\n"
 
 /***/ }),
 
@@ -118,6 +118,7 @@ var cliente_module_1 = __webpack_require__("./src/app/cliente/cliente.module.ts"
 var home_component_1 = __webpack_require__("./src/app/home/home.component.ts");
 var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var alert_component_1 = __webpack_require__("./src/app/bootstrap/alert/alert.component.ts");
+var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -126,7 +127,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
-                alert_component_1.AlertComponent
+                alert_component_1.AlertComponent,
+                login_component_1.LoginComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
@@ -148,7 +150,7 @@ exports.AppModule = AppModule;
 /***/ "./src/app/bootstrap/alert/alert.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div [className]=\"'alert alert-'+cor\" role=\"alert\">\n  {{message}}\n  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n    <span aria-hidden=\"true\">&times;</span>\n  </button>\n</div>"
+module.exports = "<div [className]=\"'alert alert-'+cor\" role=\"alert\">\r\n  {{message}}\r\n  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\r\n    <span aria-hidden=\"true\">&times;</span>\r\n  </button>\r\n</div>"
 
 /***/ }),
 
@@ -325,14 +327,14 @@ exports.ClienteService = ClienteService;
 /***/ "./src/app/cliente/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row-fluid\">\r\n        <button class=\"btn btn-outline-success\" routerLink=\"/srcp/cliente/new\"><img src=\"js/assets/svg/si-glyph-person-plus.svg\"/> Novo Cliente </button>\r\n        <div class=\"card bg-light\">\r\n            <div class=\"card-header\">Clientes</div>\r\n            <div class=\"card-body\">\r\n                <table class=\"table table-bordered table-hover\">\r\n                    <thead>\r\n                    <tr>\r\n                        <th>#</th>\r\n                        <th>Nome</th>\r\n                        <th>CPF/CNPJ</th>\r\n                        <!--<th>Telefone</th>-->\r\n                        <th>Celular</th>\r\n                        <th>Email</th>\r\n                        <!--<th>Endereco</th>-->\r\n                        <!--<th>numero</th>-->\r\n                        <!--<th>Bairro</th>-->\r\n                        <!--<th>Cidade</th>-->\r\n                        <!--<th>Estado</th>-->\r\n                        <th>Ação</th>\r\n                    </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                    <tr *ngFor=\"let cliente of listCliente\">\r\n                        <td>{{cliente.id}}</td>\r\n                        <td>{{cliente.nome}}</td>\r\n                        <td>{{cliente.cpf_cnpj}}</td>\r\n                        <!--<td>{{cliente.telefone}}</td>-->\r\n                        <td>{{cliente.celular}}</td>\r\n                        <td>{{cliente.email}}</td>\r\n                        <!--<td>{{cliente.endereco}}</td>-->\r\n                        <!--<td>{{cliente.numero}}</td>-->\r\n                        <!--<td>{{cliente.bairro}}</td>-->\r\n                        <!--<td>{{cliente.cidade}}</td>-->\r\n                        <!--<td>{{cliente.estado}}</td>-->\r\n                        <td>\r\n                            <a routerLink='/srcp/cliente/{{cliente.id}}/edit' class=\"badge badge-info\">\r\n                                <img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\"></a>\r\n                        </td>\r\n                    </tr>\r\n                    </tbody>\r\n                </table>\r\n\r\n            </div>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<div class=\"container-fluid\">\r\n    <div class=\"row-fluid\">\r\n        <button class=\"btn btn-outline-success\" routerLink=\"/srcp/cliente/new\"><img src=\"js/assets/svg/si-glyph-person-plus.svg\"/> Novo Cliente </button>\r\n        <div class=\"card bg-light\">\r\n            <div class=\"card-header\">Clientes</div>\r\n            <div class=\"card-body\">\r\n                <table class=\"table table-sm table-bordered table-hover\">\r\n                    <thead>\r\n                    <tr>\r\n                        <th>#</th>\r\n                        <th>Nome</th>\r\n                        <th>CPF/CNPJ</th>\r\n                        <!--<th>Telefone</th>-->\r\n                        <th>Celular</th>\r\n                        <th>Email</th>\r\n                        <!--<th>Endereco</th>-->\r\n                        <!--<th>numero</th>-->\r\n                        <!--<th>Bairro</th>-->\r\n                        <!--<th>Cidade</th>-->\r\n                        <!--<th>Estado</th>-->\r\n                        <th>Ação</th>\r\n                    </tr>\r\n                    </thead>\r\n                    <tbody>\r\n                    <tr *ngFor=\"let cliente of listCliente\">\r\n                        <td>{{cliente.id}}</td>\r\n                        <td>{{cliente.nome}}</td>\r\n                        <td>{{cliente.cpf_cnpj}}</td>\r\n                        <!--<td>{{cliente.telefone}}</td>-->\r\n                        <td>{{cliente.celular}}</td>\r\n                        <td>{{cliente.email}}</td>\r\n                        <!--<td>{{cliente.endereco}}</td>-->\r\n                        <!--<td>{{cliente.numero}}</td>-->\r\n                        <!--<td>{{cliente.bairro}}</td>-->\r\n                        <!--<td>{{cliente.cidade}}</td>-->\r\n                        <!--<td>{{cliente.estado}}</td>-->\r\n                        <td>\r\n                            <a routerLink='/srcp/cliente/{{cliente.id}}/edit' class=\"badge badge-info\">\r\n                                <img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\"></a>\r\n                        </td>\r\n                    </tr>\r\n                    </tbody>\r\n                </table>\r\n\r\n            </div>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ "./src/app/cliente/list/list.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Tahoma, Arial, sans-serif; }\n\n.table {\n  padding: 0;\n  margin: 0; }\n\n.table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    border-bottom: none;\n    background-color: #F0F1F2;\n    padding: .60rem; }\n\n.table tr td {\n    font-size: 12px;\n    font-family: Arial, Helvetica, sans-serif; }\n\n.table tr td .badge-info {\n      background-color: #EEEEEE;\n      border: 1px solid #44bed5; }\n\n.table tr td .badge {\n      display: inline-block;\n      padding: .30em .5em;\n      font-size: 75%;\n      font-weight: 700;\n      line-height: 1;\n      text-align: center;\n      white-space: nowrap;\n      vertical-align: baseline;\n      border-radius: 0.2rem; }\n\n.card {\n  margin-top: 20px;\n  border-bottom: none; }\n\n.card-header {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  border-bottom: none;\n  padding: .60rem 1.25rem; }\n\n.card-body {\n  padding: 0;\n  border-bottom: none; }\n"
+module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Tahoma, Arial, sans-serif; }\n\n.table {\n  padding: 0;\n  margin: 0; }\n\n.table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    border-bottom: none;\n    background-color: #F0F1F2;\n    padding: .60rem; }\n\n.table tr td {\n    font-size: 12px;\n    font-family: Arial, Helvetica, sans-serif; }\n\n.table tr td .badge-info {\n      background-color: #EEEEEE;\n      border: 1px solid #44bed5; }\n\n.table tr td .badge {\n      display: inline-block;\n      padding: .30em .5em;\n      font-size: 75%;\n      font-weight: 700;\n      line-height: 1;\n      text-align: center;\n      white-space: nowrap;\n      vertical-align: baseline;\n      border-radius: 0.2rem; }\n\n.table tr td .badge:hover {\n      background-color: #4cdaf2; }\n\n.table-sm td {\n  padding: 0.4rem 0.8rem; }\n\n.card {\n  margin-top: 20px;\n  border-bottom: none; }\n\n.card-header {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  border-bottom: none;\n  padding: .60rem 1.25rem; }\n\n.card-body {\n  padding: 0;\n  border-bottom: none; }\n"
 
 /***/ }),
 
@@ -486,7 +488,7 @@ exports.NewComponent = NewComponent;
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Testando Home</h1>\n\n<button routerLink=\"/srcp/cliente\">Clientes</button>"
+module.exports = ""
 
 /***/ }),
 
@@ -529,6 +531,56 @@ var HomeComponent = /** @class */ (function () {
     return HomeComponent;
 }());
 exports.HomeComponent = HomeComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Testando Home</h1>\n\n<button routerLink=\"/srcp/cliente\">Clientes</button>"
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/login/login.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent() {
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent = __decorate([
+        core_1.Component({
+            selector: 'app-login',
+            template: __webpack_require__("./src/app/login/login.component.html"),
+            styles: [__webpack_require__("./src/app/login/login.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoginComponent);
+    return LoginComponent;
+}());
+exports.LoginComponent = LoginComponent;
 
 
 /***/ }),

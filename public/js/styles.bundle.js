@@ -42,7 +42,7 @@ module.exports = "/*!\n * Bootstrap v4.1.0 (https://getbootstrap.com/)\n * Copyr
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/sass-loader/lib/loader.js??ref--8-3!./src/styles.scss":
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\nimg {\n  width: 16px;\n  height: 16px;\n  color: #EEEEEE;\n  fill: #eee; }\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  background-color: #2e3742; }\nimg {\n  width: 16px;\n  height: 16px;\n  color: #EEEEEE;\n  fill: #eee; }\n"
 
 /***/ }),
 
