@@ -31,10 +31,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+var home_component_1 = __webpack_require__("./src/app/home/home.component.ts");
 var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
 var route = [
     { path: 'login', component: login_component_1.LoginComponent },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'srcp/home', component: home_component_1.HomeComponent }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -56,14 +58,14 @@ exports.AppRoutingModule = AppRoutingModule;
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"content-body\">\r\n<nav class=\"navbar navbar-dark bg-dark\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\r\n        SOL Reparos\r\n    </a>\r\n</nav>\r\n\r\n    <div class=\"btn-group-vertical btn-menu\" aria-label=\"Vertical button group\">\r\n        <button type=\"button\" class=\"btn btn-secondary text-left\">Home</button>\r\n        <button type=\"button\" class=\"btn btn-secondary text-left\">Cliente</button>\r\n        <button type=\"button\" class=\"btn btn-secondary text-left\">Serviço</button>\r\n        <button type=\"button\" class=\"btn btn-secondary text-left\">Ordem de Serviço</button>\r\n        <button type=\"button\" class=\"btn btn-secondary b-border\"></button>\r\n    </div>\r\n\r\n\r\n\r\n<router-outlet></router-outlet>\r\n<footer class=\"footer\">\r\n    <div class=\"container text-center\">\r\n        <span class=\"text-muted\">Coloque o conteúdo do rodapé fixo aqui.</span>\r\n    </div>\r\n</footer>\r\n</div>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div class=\"content-body\">\r\n<nav class=\"navbar navbar-dark bg-dark\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\r\n        SOL Reparos\r\n    </a>\r\n</nav>\r\n\r\n    <div class=\"btn-group-vertical btn-menu\" aria-label=\"Vertical button group\">\r\n        <button type=\"button\" routerLinkActive=\"active\" routerLink=\"/srcp/home\" class=\"btn btn-secondary text-left\">\r\n            <img src=\"js/assets/svg/si-glyph-house.svg\" alt=\"\"><span class=\"img-active\"> Home</span></button>\r\n        <button type=\"button\" routerLinkActive=\"active\" routerLink=\"/srcp/cliente\" class=\"btn btn-secondary text-left\">\r\n            <img src=\"js/assets/svg/si-glyph-person-public.svg\" alt=\"\"><span class=\"img-active\"> Clientes</span></button>\r\n        <button type=\"button\" routerLinkActive=\"active\" routerLink=\"/srcp/servico\" class=\"btn btn-secondary text-left\">\r\n            <img src=\"js/assets/svg/si-glyph-hammer-and-wrench.svg\" alt=\"\"><span class=\"img-active\"> Serviços</span></button>\r\n        <button type=\"button\" class=\"btn btn-secondary text-left\">\r\n            <img src=\"js/assets/svg/si-glyph-tag-price.svg\" alt=\"\"> Ordem de Serviços</button>\r\n        <button type=\"button\" class=\"btn btn-secondary b-border\"></button>\r\n    </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n<router-outlet></router-outlet>\r\n<footer class=\"footer\">\r\n    <div class=\"container text-center\">\r\n        <span class=\"text-muted\">Coloque o conteúdo do rodapé fixo aqui.</span>\r\n    </div>\r\n</footer>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/app.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".content-body {\n  background-color: #2e3031;\n  position: absolute;\n  width: 100%;\n  min-height: 100%; }\n  .content-body .navbar {\n    padding: 1.8rem 1rem; }\n  .content-body .btn-menu {\n    float: left;\n    width: 220px; }\n  .content-body .btn-secondary {\n    font-size: 13px;\n    color: #d7d3c7;\n    border-radius: 0;\n    background-color: #2E3031;\n    border-left: none;\n    border-right: none;\n    padding: 13px 20px;\n    margin-top: 0.1px;\n    border-top-color: #414344;\n    border-bottom-color: #151515; }\n  .content-body .b-border {\n    padding: 0px;\n    border-bottom-color: #353535; }\n  .content-body .btn-secondary:hover {\n    background-color: #9a9c8e; }\n  .content-body .card {\n    border-radius: 0px;\n    margin-top: -44px;\n    margin-left: 220px; }\n  .content-body .card .card-header {\n      background-color: #FFFFFF;\n      padding: 0.6rem 1.25rem; }\n  .content-body .card .card-body {\n      padding: 0;\n      padding-left: 20px;\n      padding-right: 20px;\n      background-color: #F0F1F2; }\n  .content-body .footer {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 60px;\n    line-height: 60px;\n    background-color: #2e3031; }\n"
+module.exports = ".content-body {\n  background-color: #2e3031;\n  position: absolute;\n  width: 100%;\n  min-height: 100%; }\n  .content-body .navbar {\n    padding: 1.8rem 1rem; }\n  .content-body img {\n    margin-bottom: 5px;\n    margin-right: 8px;\n    width: 15px;\n    height: 15px; }\n  .content-body .btn-menu {\n    float: left;\n    width: 220px; }\n  .content-body .btn-secondary {\n    font-size: 13px;\n    color: #d7d3c7;\n    border-radius: 0;\n    background-color: #2E3031;\n    border-left: none;\n    border-right: none;\n    padding: 13px 0px 13px 15px;\n    margin-top: 0.1px;\n    border-top-color: #414344;\n    border-bottom-color: #151515; }\n  .content-body .b-border {\n    padding: 0px;\n    border-bottom-color: #353535; }\n  .content-body .btn-secondary:hover {\n    background-color: #9a9c8e; }\n  .content-body .btn.active {\n    background-color: #9a9c8e;\n    border-bottom: 1px solid #9a9c8e;\n    border-top: 1px solid #9a9c8e; }\n  .content-body .btn.active > span {\n    background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOCAYAAADjXQYbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADZmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOkY3N0YxMTc0MDcyMDY4MTE5MkIwREY4NUQ0OTY0RjhBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQ2RDY2NTNFNjkyQjExRTA5NTM5REREODE3NEE4NTRDIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQ2RDY2NTNENjkyQjExRTA5NTM5REREODE3NEE4NTRDIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDI4MDExNzQwNzIwNjgxMUE3QkFEOTgwQjFBOUIwNTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTkyQjBERjg1RDQ5NjRGOEEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4nn/J4AAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMTI6MDg6MTAgMTg6NTM6NDBr1POsAAAATklEQVQoU3WQ2wkAMAgDa0dw/xldwWJB8RH99C5gJFU9aERE7wZsP6AlPFBgBiXZQUAEPtwAPChff5mZYFGvsglRBQmlZxfGh7IAf+vCA8faHuLttYI2AAAAAElFTkSuQmCC\") no-repeat scroll right center transparent !important;\n    text-decoration: none;\n    float: right;\n    width: 86%; }\n  .content-body .card {\n    border-radius: 0px;\n    margin-top: -44px;\n    margin-left: 220px; }\n  .content-body .card .card-header {\n      background-color: #FFFFFF;\n      padding: 0.6rem 1.25rem; }\n  .content-body .card .card-body {\n      padding: 0;\n      padding-left: 20px;\n      padding-right: 20px;\n      background-color: #F0F1F2; }\n  .content-body .footer {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 60px;\n    line-height: 60px;\n    background-color: #2e3031; }\n"
 
 /***/ }),
 
@@ -118,6 +120,7 @@ var cliente_module_1 = __webpack_require__("./src/app/cliente/cliente.module.ts"
 var home_component_1 = __webpack_require__("./src/app/home/home.component.ts");
 var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var login_component_1 = __webpack_require__("./src/app/login/login.component.ts");
+var servico_module_1 = __webpack_require__("./src/app/servico/servico.module.ts");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -132,7 +135,8 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 http_1.HttpClientModule,
-                cliente_module_1.ClienteModule
+                cliente_module_1.ClienteModule,
+                servico_module_1.ServicoModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
@@ -175,8 +179,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var message_service_1 = __webpack_require__("./src/app/bootstrap/message.service.ts");
 var AlertComponent = /** @class */ (function () {
-    function AlertComponent() {
+    function AlertComponent(messageService) {
+        this.messageService = messageService;
         this.cor = 'success';
         this.timeout = null;
     }
@@ -186,6 +192,7 @@ var AlertComponent = /** @class */ (function () {
             setTimeout(function () {
                 $(_this.divAlert.nativeElement).alert('close');
             }, this.timeout);
+            this.messageService.message = null;
         }
     };
     __decorate([
@@ -206,7 +213,7 @@ var AlertComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/bootstrap/alert/alert.component.html"),
             styles: [__webpack_require__("./src/app/bootstrap/alert/alert.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [message_service_1.MessageService])
     ], AlertComponent);
     return AlertComponent;
 }());
@@ -242,6 +249,56 @@ var MessageService = /** @class */ (function () {
     return MessageService;
 }());
 exports.MessageService = MessageService;
+
+
+/***/ }),
+
+/***/ "./src/app/cliente/cliente-card/cliente-card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card bg-ligth\">\n  <div class=\"card-header\"> Home > Cliente</div>\n  <div class=\"card-body\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/cliente/cliente-card/cliente-card.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Helvetica, Roboto, Arial, sans-serif; }\n\n.card {\n  position: relative;\n  border-radius: 0px;\n  border-left: none;\n  margin-top: -44px;\n  margin-left: 220px;\n  min-height: 850px; }\n\n.card .card-header {\n    background-color: #FFFFFF;\n    padding: 0.6rem 1.25rem; }\n\n.card .card-body {\n    padding: 0;\n    padding: 0px 20px;\n    background-color: #F0F1F2; }\n"
+
+/***/ }),
+
+/***/ "./src/app/cliente/cliente-card/cliente-card.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var ClienteCardComponent = /** @class */ (function () {
+    function ClienteCardComponent() {
+    }
+    ClienteCardComponent.prototype.ngOnInit = function () {
+    };
+    ClienteCardComponent = __decorate([
+        core_1.Component({
+            selector: 'app-cliente-card',
+            template: __webpack_require__("./src/app/cliente/cliente-card/cliente-card.component.html"),
+            styles: [__webpack_require__("./src/app/cliente/cliente-card/cliente-card.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ClienteCardComponent);
+    return ClienteCardComponent;
+}());
+exports.ClienteCardComponent = ClienteCardComponent;
 
 
 /***/ }),
@@ -308,6 +365,7 @@ var new_component_1 = __webpack_require__("./src/app/cliente/new/new.component.t
 var alert_component_1 = __webpack_require__("./src/app/bootstrap/alert/alert.component.ts");
 var message_service_1 = __webpack_require__("./src/app/bootstrap/message.service.ts");
 var view_component_1 = __webpack_require__("./src/app/cliente/view/view.component.ts");
+var cliente_card_component_1 = __webpack_require__("./src/app/cliente/cliente-card/cliente-card.component.ts");
 var ClienteModule = /** @class */ (function () {
     function ClienteModule() {
     }
@@ -317,7 +375,8 @@ var ClienteModule = /** @class */ (function () {
                 list_component_1.ListComponent,
                 new_component_1.NewComponent,
                 alert_component_1.AlertComponent,
-                view_component_1.ViewComponent
+                view_component_1.ViewComponent,
+                cliente_card_component_1.ClienteCardComponent
             ],
             imports: [
                 common_1.CommonModule,
@@ -388,14 +447,14 @@ exports.ClienteService = ClienteService;
 /***/ "./src/app/cliente/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card c1 bg-ligth\">\r\n    <div class=\"card-header c-header1\"> Home > Cliente</div>\r\n    <div class=\"card-body c-body1\">\r\n\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row-fluid\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-2\">\r\n                        <button class=\"btn btn-outline-success\" routerLink=\"/srcp/cliente/new\"><img\r\n                                src=\"js/assets/svg/si-glyph-person-plus.svg\"/> Novo Cliente\r\n                        </button>\r\n                    </div>\r\n                    <div *ngIf=\"message\" class=\"col-md-8 text-left\">\r\n                        <app-alert [timeout]=\"4000\">{{message}}</app-alert>\r\n                    </div>\r\n                </div>\r\n                <div class=\"card c2 bg-light\">\r\n                    <div class=\"card-header c-header2\">Clientes</div>\r\n                    <div class=\"card-body c-body2\">\r\n                        <!--<table class=\"table table-sm table-bordered table-hover\">-->\r\n                        <table id=\"mytable\" class=\"table table-sm display\" data-order='[[ 0, \"desc\" ]]'>\r\n                            <thead>\r\n                            <tr>\r\n                                <th>#</th>\r\n                                <th>Nome</th>\r\n                                <th>CPF/CNPJ</th>\r\n                                <!--<th>Telefone</th>-->\r\n                                <th>Celular</th>\r\n                                <th>Email</th>\r\n                                <!--<th>Endereco</th>-->\r\n                                <!--<th>numero</th>-->\r\n                                <!--<th>Bairro</th>-->\r\n                                <!--<th>Cidade</th>-->\r\n                                <!--<th>Estado</th>-->\r\n                                <th>Ação</th>\r\n                            </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                            <tr *ngFor=\"let cliente of listCliente; let i = index\">\r\n                                <td>{{cliente.id}}</td>\r\n                                <td>{{cliente.nome}}</td>\r\n                                <td>{{cliente.cpf_cnpj}}</td>\r\n                                <!--<td>{{cliente.telefone}}</td>-->\r\n                                <td>{{cliente.celular}}</td>\r\n                                <td>{{cliente.email}}</td>\r\n                                <!--<td>{{cliente.endereco}}</td>-->\r\n                                <!--<td>{{cliente.numero}}</td>-->\r\n                                <!--<td>{{cliente.bairro}}</td>-->\r\n                                <!--<td>{{cliente.cidade}}</td>-->\r\n                                <!--<td>{{cliente.estado}}</td>-->\r\n                                <td>\r\n                                    <a routerLink='/srcp/cliente/{{cliente.id}}/view' class=\"badge b-view badge-secundario\">\r\n                                        <img src=\"js/assets/svg/si-glyph-view.svg\" alt=\"\">\r\n                                    </a>\r\n                                    <a routerLink='/srcp/cliente/{{cliente.id}}/edit' class=\"badge b-edit badge-info\">\r\n                                        <img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\">\r\n                                    </a>\r\n                                    <a href=\"javascript:void(0)\" (click)=\"destroy(cliente.id,i)\" class=\"badge b-delete badge-danger\">\r\n                                        <img src=\"js/assets/svg/si-glyph-delete.svg\" alt=\"\">\r\n                                    </a>\r\n                                </td>\r\n                            </tr>\r\n                            </tbody>\r\n                        </table>\r\n\r\n                    </div>\r\n                </div>\r\n\r\n\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<app-cliente-card>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\">\r\n                    <button class=\"btn btn-outline-success\" routerLink=\"/srcp/cliente/new\"><img\r\n                            src=\"js/assets/svg/si-glyph-person-plus.svg\"/> Novo Cliente\r\n                    </button>\r\n                </div>\r\n                <div *ngIf=\"message\" class=\"col-md-8 text-left\">\r\n                    <app-alert [timeout]=\"4000\">{{message}}</app-alert>\r\n                </div>\r\n            </div>\r\n            <div class=\"card c2 bg-light\">\r\n                <div class=\"card-header c-header2\">Clientes</div>\r\n                <div class=\"card-body c-body2\">\r\n                    <!--<table class=\"table table-sm table-bordered table-hover\">-->\r\n                    <table id=\"mytable\" class=\"table table-sm display\" data-order='[[ 0, \"desc\" ]]'>\r\n                        <thead>\r\n                        <tr>\r\n                            <th>#</th>\r\n                            <th>Nome</th>\r\n                            <th>CPF/CNPJ</th>\r\n                            <!--<th>Telefone</th>-->\r\n                            <th>Celular</th>\r\n                            <th>Email</th>\r\n                            <!--<th>Endereco</th>-->\r\n                            <!--<th>numero</th>-->\r\n                            <!--<th>Bairro</th>-->\r\n                            <!--<th>Cidade</th>-->\r\n                            <!--<th>Estado</th>-->\r\n                            <th>Ação</th>\r\n                        </tr>\r\n                        </thead>\r\n                        <tbody id=\"tbC\" hidden>\r\n                        <tr *ngFor=\"let cliente of listCliente; let i = index\">\r\n                            <td>{{cliente.id}}</td>\r\n                            <td>{{cliente.nome}}</td>\r\n                            <td>{{cliente.cpf_cnpj}}</td>\r\n                            <!--<td>{{cliente.telefone}}</td>-->\r\n                            <td>{{cliente.celular}}</td>\r\n                            <td>{{cliente.email}}</td>\r\n                            <!--<td>{{cliente.endereco}}</td>-->\r\n                            <!--<td>{{cliente.numero}}</td>-->\r\n                            <!--<td>{{cliente.bairro}}</td>-->\r\n                            <!--<td>{{cliente.cidade}}</td>-->\r\n                            <!--<td>{{cliente.estado}}</td>-->\r\n                            <td>\r\n                                <a routerLink='/srcp/cliente/{{cliente.id}}/view' class=\"badge b-view badge-secundario\">\r\n                                    <img src=\"js/assets/svg/si-glyph-view.svg\" alt=\"\">\r\n                                </a>\r\n                                <a routerLink='/srcp/cliente/{{cliente.id}}/edit' class=\"badge b-edit badge-info\">\r\n                                    <img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\">\r\n                                </a>\r\n                                <a href=\"javascript:void(0)\" (click)=\"destroy(cliente.id,i)\" class=\"badge b-delete badge-danger\">\r\n                                    <img src=\"js/assets/svg/si-glyph-delete.svg\" alt=\"\">\r\n                                </a>\r\n                            </td>\r\n                        </tr>\r\n                        </tbody>\r\n                    </table>\r\n\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n    </div>\r\n</app-cliente-card>\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ "./src/app/cliente/list/list.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".container-fluid {\n  margin: 0;\n  margin-top: 25px;\n  padding: 0; }\n  .container-fluid .row-fluid {\n    font-family: Tahoma, Arial, sans-serif; }\n  .table {\n  padding: 0;\n  margin: 0; }\n  .table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    background-color: #F0F1F2;\n    padding: .60rem; }\n  .table tr td {\n    font-size: 12px;\n    font-family: Arial, Helvetica, sans-serif; }\n  .table tr td .badge {\n      display: inline-block;\n      padding: .30em .5em;\n      font-size: 75%;\n      font-weight: 700;\n      line-height: 1;\n      text-align: center;\n      white-space: nowrap;\n      vertical-align: baseline;\n      border-radius: 0.2rem; }\n  .table tr td .b-edit {\n      background-color: rgba(78, 216, 240, 0.18);\n      border: 1px solid #3ea5bc; }\n  .table tr td .b-edit:hover {\n      background-color: #4cdaf2; }\n  .table tr td .b-view {\n      background-color: #EEEEEE;\n      border: 1px solid #888a88; }\n  .table tr td .b-view:hover {\n      background-color: #858489; }\n  .table tr td .b-delete {\n      background-color: rgba(238, 0, 10, 0.16);\n      border: 1px solid #d10009; }\n  .table tr td .b-delete:hover {\n      background-color: rgba(255, 25, 23, 0.67); }\n  .table-sm td {\n  padding: 0.4rem 0.8rem; }\n  .c1 {\n  position: relative;\n  border-radius: 0px;\n  margin-top: -44px;\n  margin-left: 220px;\n  min-height: 850px; }\n  .c1 .c-header1 {\n    background-color: #FFFFFF;\n    padding: 0.6rem 1.25rem; }\n  .c1 .c-body1 {\n    padding: 0;\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: #F0F1F2; }\n  .c2 {\n  margin-top: 20px; }\n  .c2 .c-header2 {\n    background-color: #e3e3e3;\n    font-weight: bold;\n    color: rgba(16, 16, 16, 0.59);\n    border-bottom: none;\n    padding: 4px 16px 0px; }\n  .c2 .c-body2 {\n    padding: 0;\n    border-bottom: none; }\n  .c2 .bg-light {\n    background-color: #e3e3e3; }\n"
+module.exports = ".container-fluid {\n  margin: 0;\n  margin-top: 25px;\n  padding: 0; }\n  .container-fluid .row-fluid {\n    font-family: Tahoma, Arial, sans-serif; }\n  .table {\n  padding: 0;\n  margin: 0; }\n  .table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    background-color: #F0F1F2;\n    padding: .60rem; }\n  .table tr td {\n    font-size: 12px;\n    font-family: Arial, Helvetica, sans-serif; }\n  .table tr td .badge {\n      display: inline-block;\n      padding: .30em .5em;\n      font-size: 75%;\n      font-weight: 700;\n      line-height: 1;\n      text-align: center;\n      white-space: nowrap;\n      vertical-align: baseline;\n      border-radius: 0.2rem; }\n  .table tr td .b-edit {\n      background-color: rgba(78, 216, 240, 0.18);\n      border: 1px solid #3ea5bc; }\n  .table tr td .b-edit:hover {\n      background-color: #4cdaf2; }\n  .table tr td .b-view {\n      background-color: #EEEEEE;\n      border: 1px solid #888a88; }\n  .table tr td .b-view:hover {\n      background-color: #858489; }\n  .table tr td .b-delete {\n      background-color: rgba(238, 0, 10, 0.16);\n      border: 1px solid #d10009; }\n  .table tr td .b-delete:hover {\n      background-color: rgba(255, 25, 23, 0.67); }\n  .table-sm td {\n  padding: 0.4rem 0.8rem; }\n  .c2 {\n  margin-top: 20px; }\n  .c2 .c-header2 {\n    background-color: #e3e3e3;\n    font-weight: bold;\n    color: rgba(16, 16, 16, 0.59);\n    border-bottom: none;\n    padding: 4px 16px 0px; }\n  .c2 .c-body2 {\n    padding: 0;\n    border-bottom: none; }\n  .c2 .bg-light {\n    background-color: #e3e3e3; }\n"
 
 /***/ }),
 
@@ -456,7 +515,8 @@ var ListComponent = /** @class */ (function () {
             $('table.dataTable.no-footer').css({ 'border-bottom': 'none' });
             $('.dataTables_wrapper .ui-toolbar').css('padding', '2px 8px');
             $('#mytable_length').css('padding', '8px 8px 2px');
-        }, 800);
+            $('#tbC').removeAttr('hidden', false);
+        }, 1000);
         this.getClienteList();
     };
     ListComponent.prototype.getClienteList = function () {
@@ -493,14 +553,14 @@ exports.ListComponent = ListComponent;
 /***/ "./src/app/cliente/new/new.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card c1 bg-ligth\">\r\n    <div class=\"card-header c-header1\"> Home > Cliente</div>\r\n    <div class=\"card-body c-body1\">\r\n\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row-fluid\">\r\n                <form action=\"\" #f=\"ngForm\">\r\n                    <input type=\"hidden\" name=\"id\" [(ngModel)]=\"cliente.id\">\r\n                    <div class=\"card c2 bg-light\">\r\n                        <div class=\"card-header c-header2\">{{cliente.id ? 'Alterar Cliente': 'Novo Cliente'}}</div>\r\n                        <div class=\"card-body c-body2\">\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-3\">\r\n                                    <label for=\"cpf_cnpj\" class=\"control-label\">CPF/CNPJ</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"cpf_cnpj\" name=\"cpf_cnpj\"\r\n                                           [(ngModel)]=\"cliente.cpf_cnpj\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-4\">\r\n                                    <label for=\"nome\" class=\"control-label\">Nome</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"nome\" name=\"nome\"\r\n                                           [(ngModel)]=\"cliente.nome\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                                <div class=\"form-group col-md-3\">\r\n                                    <label for=\"telefone\" class=\"control-label\">Telefone</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"telefone\" name=\"telefone\"\r\n                                           [(ngModel)]=\"cliente.telefone\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n\r\n                            </div>\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-4\">\r\n                                    <label for=\"email\" class=\"control-label\">Email</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"email\" name=\"email\"\r\n                                           [(ngModel)]=\"cliente.email\"\r\n                                           required email\r\n                                    >\r\n                                </div>\r\n\r\n                                <div class=\"form-group col-md-3\">\r\n                                    <label for=\"celular\" class=\"control-label\">Celular</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"celular\" name=\"celular\"\r\n                                           [(ngModel)]=\"cliente.celular\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-3\">\r\n                                    <label for=\"cep\" class=\"control-label\">CEP</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"cep\" name=\"cep\"\r\n                                           [(ngModel)]=\"cliente.cep\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                                <div class=\"form-group col-md-1\">\r\n                                    <label for=\"numero\" class=\"control-label\">Numero</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"numero\" name=\"numero\"\r\n                                           [(ngModel)]=\"cliente.numero\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n\r\n                                <div class=\"form-group col-md-3\">\r\n                                    <label for=\"endereco\" class=\"control-label\">Endereço</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"endereco\" name=\"endereco\"\r\n                                           [(ngModel)]=\"cliente.endereco\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"form-row\">\r\n                                <div class=\"form-group col-md-3\">\r\n                                    <label for=\"cidade\" class=\"control-label\">Cidade</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"cidade\" name=\"cidade\"\r\n                                           [(ngModel)]=\"cliente.cidade\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                                <div class=\"form-group col-md-1\">\r\n                                    <label for=\"estado\" class=\"control-label\">Estado</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"estado\" name=\"estado\"\r\n                                           [(ngModel)]=\"cliente.estado\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                                <div class=\"form-group col-md-3\">\r\n                                    <label for=\"bairro\" class=\"control-label\">Bairro</label>\r\n                                    <input class=\"form-control\" type=\"text\" id=\"bairro\" name=\"bairro\"\r\n                                           [(ngModel)]=\"cliente.bairro\"\r\n                                           required\r\n                                    >\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <button *ngIf=\"cliente.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"update()\"\r\n                            [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\r\n                        Alterar Cliente\r\n                    </button>\r\n                    <button *ngIf=\"!cliente.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"save()\"\r\n                            [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\r\n                        Salvar Cliente\r\n                    </button>\r\n                    <button class=\"btn btn-outline-secondary\" routerLink=\"/srcp/cliente\">\r\n                        <img src=\"js/assets/svg/si-glyph-backward-page.svg\"/> Voltar\r\n                    </button>\r\n                </form>\r\n            </div>\r\n\r\n        </div>\r\n\r\n    </div>\r\n</div>"
+module.exports = "<app-cliente-card>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row-fluid\">\r\n            <form action=\"\" #f=\"ngForm\">\r\n                <input type=\"hidden\" name=\"id\" [(ngModel)]=\"cliente.id\">\r\n                <div class=\"card c2 bg-light\">\r\n                    <div class=\"card-header c-header2\">{{cliente.id ? 'Alterar Cliente': 'Novo Cliente'}}</div>\r\n                    <div class=\"card-body c-body2\">\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"cpf_cnpj\" class=\"control-label\">CPF/CNPJ</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"cpf_cnpj\" name=\"cpf_cnpj\"\r\n                                       [(ngModel)]=\"cliente.cpf_cnpj\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-4\">\r\n                                <label for=\"nome\" class=\"control-label\">Nome</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"nome\" name=\"nome\"\r\n                                       [(ngModel)]=\"cliente.nome\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"telefone\" class=\"control-label\">Telefone</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"telefone\" name=\"telefone\"\r\n                                       [(ngModel)]=\"cliente.telefone\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-4\">\r\n                                <label for=\"email\" class=\"control-label\">Email</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"email\" name=\"email\"\r\n                                       [(ngModel)]=\"cliente.email\"\r\n                                       required email\r\n                                >\r\n                            </div>\r\n\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"celular\" class=\"control-label\">Celular</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"celular\" name=\"celular\"\r\n                                       [(ngModel)]=\"cliente.celular\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"cep\" class=\"control-label\">CEP</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"cep\" name=\"cep\"\r\n                                       [(ngModel)]=\"cliente.cep\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                            <div class=\"form-group col-md-1\">\r\n                                <label for=\"numero\" class=\"control-label\">Numero</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"numero\" name=\"numero\"\r\n                                       [(ngModel)]=\"cliente.numero\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"endereco\" class=\"control-label\">Endereço</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"endereco\" name=\"endereco\"\r\n                                       [(ngModel)]=\"cliente.endereco\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"cidade\" class=\"control-label\">Cidade</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"cidade\" name=\"cidade\"\r\n                                       [(ngModel)]=\"cliente.cidade\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                            <div class=\"form-group col-md-1\">\r\n                                <label for=\"estado\" class=\"control-label\">Estado</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"estado\" name=\"estado\"\r\n                                       [(ngModel)]=\"cliente.estado\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"bairro\" class=\"control-label\">Bairro</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"bairro\" name=\"bairro\"\r\n                                       [(ngModel)]=\"cliente.bairro\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <button *ngIf=\"cliente.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"update()\"\r\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\r\n                    Alterar Cliente\r\n                </button>\r\n                <button *ngIf=\"!cliente.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"save()\"\r\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\r\n                    Salvar Cliente\r\n                </button>\r\n                <button class=\"btn btn-outline-secondary\" routerLink=\"/srcp/cliente\">\r\n                    <img src=\"js/assets/svg/si-glyph-backward-page.svg\"/> Voltar\r\n                </button>\r\n            </form>\r\n        </div>\r\n\r\n    </div>\r\n</app-cliente-card>\r\n\r\n<!--<div class=\"card c1 bg-ligth\">-->\r\n    <!--<div class=\"card-header c-header1\"> Home > Cliente</div>-->\r\n    <!--<div class=\"card-body c-body1\">-->\r\n\r\n\r\n\r\n    <!--</div>-->\r\n<!--</div>-->"
 
 /***/ }),
 
 /***/ "./src/app/cliente/new/new.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Helvetica, Roboto, Arial, sans-serif; }\n\n.c1 {\n  position: relative;\n  border-radius: 0px;\n  margin-top: -44px;\n  margin-left: 220px;\n  min-height: 850px; }\n\n.c1 .c-header1 {\n    background-color: #FFFFFF;\n    padding: 0.6rem 1.25rem; }\n\n.c1 .c-body1 {\n    padding: 0;\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: #F0F1F2; }\n\n.c2 {\n  margin-top: 20px;\n  margin-bottom: 20px; }\n\n.c-header2 {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  padding: .60rem 1.25rem; }\n\n.control-label {\n  font-size: 13px;\n  font-weight: 700;\n  color: rgba(103, 87, 57, 0.8); }\n\n.ng-invalid.ng-touched:not(form) {\n  border: 1px solid red; }\n"
+module.exports = ".c2 {\n  margin-top: 20px;\n  margin-bottom: 20px; }\n\n.c-header2 {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  padding: .60rem 1.25rem; }\n\n.control-label {\n  font-size: 13px;\n  font-weight: 700;\n  color: rgba(103, 87, 57, 0.8); }\n\n.ng-invalid.ng-touched:not(form) {\n  border: 1px solid red; }\n"
 
 /***/ }),
 
@@ -595,14 +655,14 @@ exports.NewComponent = NewComponent;
 /***/ "./src/app/cliente/view/view.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card c1 bg-ligth\">\r\n    <div class=\"card-header c-header1\"> Home > Cliente</div>\r\n    <div class=\"card-body c-body1\">\r\n\r\n        <div class=\"container-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-6\">\r\n                    <div class=\"card c2 bg-light\">\r\n                        <div class=\"card-header c-header2\">Dados do Pessoais</div>\r\n                        <div class=\"card-body c-body2\">\r\n\r\n                            <table class=\"table table-bordered\">\r\n                                <tbody>\r\n                                <tr>\r\n                                    <td class=\"col\">Nome</td>\r\n                                    <td class=\"col2\">{{ cliente.nome }}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">CPF/CNPJ</td>\r\n                                    <td class=\"col2\">{{cliente.cpf_cnpj}}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">Telefone</td>\r\n                                    <td class=\"col2\">{{cliente.telefone}}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">Celular</td>\r\n                                    <td class=\"col2\">{{cliente.celular}}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">Email</td>\r\n                                    <td class=\"col2\">{{cliente.email}}</td>\r\n                                </tr>\r\n                                </tbody>\r\n                            </table>\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-md-6\">\r\n                    <div class=\"card c2 bg-light\">\r\n                        <div class=\"card-header c-header2\">Endereço</div>\r\n                        <div class=\"card-body c-body2\">\r\n\r\n                            <table class=\"table table-bordered\">\r\n                                <tbody>\r\n                                <tr>\r\n                                    <td class=\"col\">Endereco</td>\r\n                                    <td class=\"col2\">{{cliente.endereco}}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">Numero</td>\r\n                                    <td class=\"col2\">{{cliente.numero}}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">Bairro</td>\r\n                                    <td class=\"col2\">{{cliente.bairro}}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">Cidade</td>\r\n                                    <td class=\"col2\">{{cliente.cidade}}</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td class=\"col\">Estado</td>\r\n                                    <td class=\"col2\">{{cliente.estado}}</td>\r\n                                </tr>\r\n\r\n                                </tbody>\r\n                            </table>\r\n\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <button routerLink='/srcp/cliente/{{cliente.id}}/edit' class=\"btn btn-outline-success\">\r\n                <img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\"> Editar Cliente\r\n            </button>\r\n            <button class=\"btn btn-outline-secondary\" routerLink=\"/srcp/cliente\">\r\n                <img src=\"js/assets/svg/si-glyph-backward-page.svg\"/> Voltar\r\n            </button>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>"
+module.exports = "<app-cliente-card>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6\">\r\n                <div class=\"card c2 bg-light\">\r\n                    <div class=\"card-header c-header2\">Dados do Pessoais</div>\r\n                    <div class=\"card-body c-body2\">\r\n\r\n                        <table class=\"table table-bordered\">\r\n                            <tbody>\r\n                            <tr>\r\n                                <td class=\"col\">Nome</td>\r\n                                <td class=\"col2\">{{ cliente.nome }}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">CPF/CNPJ</td>\r\n                                <td class=\"col2\">{{cliente.cpf_cnpj}}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">Telefone</td>\r\n                                <td class=\"col2\">{{cliente.telefone}}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">Celular</td>\r\n                                <td class=\"col2\">{{cliente.celular}}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">Email</td>\r\n                                <td class=\"col2\">{{cliente.email}}</td>\r\n                            </tr>\r\n                            </tbody>\r\n                        </table>\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6\">\r\n                <div class=\"card c2 bg-light\">\r\n                    <div class=\"card-header c-header2\">Endereço</div>\r\n                    <div class=\"card-body c-body2\">\r\n\r\n                        <table class=\"table table-bordered\">\r\n                            <tbody>\r\n                            <tr>\r\n                                <td class=\"col\">Endereco</td>\r\n                                <td class=\"col2\">{{cliente.endereco}}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">Numero</td>\r\n                                <td class=\"col2\">{{cliente.numero}}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">Bairro</td>\r\n                                <td class=\"col2\">{{cliente.bairro}}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">Cidade</td>\r\n                                <td class=\"col2\">{{cliente.cidade}}</td>\r\n                            </tr>\r\n                            <tr>\r\n                                <td class=\"col\">Estado</td>\r\n                                <td class=\"col2\">{{cliente.estado}}</td>\r\n                            </tr>\r\n\r\n                            </tbody>\r\n                        </table>\r\n\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <button routerLink='/srcp/cliente/{{cliente.id}}/edit' class=\"btn btn-outline-success\">\r\n            <img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\"> Editar Cliente\r\n        </button>\r\n        <button class=\"btn btn-outline-secondary\" routerLink=\"/srcp/cliente\">\r\n            <img src=\"js/assets/svg/si-glyph-backward-page.svg\"/> Voltar\r\n        </button>\r\n    </div>\r\n</app-cliente-card>\r\n\r\n<!--<div class=\"card c1 bg-ligth\">-->\r\n    <!--<div class=\"card-header c-header1\"> Home > Cliente</div>-->\r\n    <!--<div class=\"card-body c-body1\">-->\r\n\r\n\r\n\r\n\r\n    <!--</div>-->\r\n<!--</div>-->"
 
 /***/ }),
 
 /***/ "./src/app/cliente/view/view.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Helvetica, Roboto, Arial, sans-serif; }\n\n.c1 {\n  position: relative;\n  border-radius: 0px;\n  margin-top: -44px;\n  margin-left: 220px;\n  min-height: 850px; }\n\n.c1 .c-header1 {\n    background-color: #FFFFFF;\n    padding: 0.6rem 1.25rem; }\n\n.c1 .c-body1 {\n    padding: 0;\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: #F0F1F2; }\n\n.c2 {\n  margin-top: 20px;\n  margin-bottom: 20px; }\n\n.c-header2 {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  padding: .60rem 1.25rem; }\n\n.c-body2 .table .col {\n  width: 30%;\n  color: #747373;\n  font-weight: bold;\n  font-size: 13px; }\n\n.c-body2 .table .col2 {\n  color: #8a8989;\n  font-size: 13px; }\n"
+module.exports = ".c2 {\n  margin-top: 20px;\n  margin-bottom: 20px; }\n\n.c-header2 {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  padding: .60rem 1.25rem; }\n\n.c-body2 .table .col {\n  width: 30%;\n  color: #747373;\n  font-weight: bold;\n  font-size: 13px; }\n\n.c-body2 .table .col2 {\n  color: #8a8989;\n  font-size: 13px; }\n"
 
 /***/ }),
 
@@ -675,14 +735,14 @@ exports.ViewComponent = ViewComponent;
 /***/ "./src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "<div class=\"card c1 bg-ligth\">\r\n    <div class=\"card-header c-header1\"> Home > Cliente</div>\r\n    <div class=\"card-body c-body1\">\r\n\r\n        <h1>Tela Home</h1>\r\n\r\n    </div>\r\n</div>\r\n\r\n<!--<app-layout-body>-->\r\n\r\n<!--</app-layout-body>-->"
 
 /***/ }),
 
 /***/ "./src/app/home/home.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Helvetica, Roboto, Arial, sans-serif; }\n\n.c1 {\n  position: relative;\n  border-radius: 0px;\n  border-left: none;\n  margin-top: -44px;\n  margin-left: 220px;\n  min-height: 850px; }\n\n.c1 .c-header1 {\n    background-color: #FFFFFF;\n    padding: 0.6rem 1.25rem; }\n\n.c1 .c-body1 {\n    padding: 0;\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: #F0F1F2; }\n"
 
 /***/ }),
 
@@ -768,6 +828,259 @@ var LoginComponent = /** @class */ (function () {
     return LoginComponent;
 }());
 exports.LoginComponent = LoginComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/servico/list/list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-servico-card>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row-fluid\">\r\n\r\n            <div class=\"card c2 bg-light\">\r\n                <div class=\"card-header c-header2\">Serviços</div>\r\n                <div class=\"card-body c-body2\">\r\n\r\n                    <table id=\"t_servico\" class=\"table table-sm display\">\r\n                        <thead>\r\n                        <tr>\r\n                            <th>#</th>\r\n                            <th>Nome</th>\r\n                            <th>Preço</th>\r\n                            <th>Descrição</th>\r\n                        </tr>\r\n                        </thead>\r\n                        <tbody id=\"tbS\" hidden>\r\n                        <tr *ngFor=\"let servico of listServico\">\r\n                            <td>{{servico.id}}</td>\r\n                            <td>{{servico.nome}}</td>\r\n                            <td>{{servico.preco}}</td>\r\n                            <td>{{servico.descricao}}</td>\r\n                        </tr>\r\n                        </tbody>\r\n                    </table>\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</app-servico-card>"
+
+/***/ }),
+
+/***/ "./src/app/servico/list/list.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".container-fluid {\n  margin: 25px 0px 0px 0px;\n  padding: 0; }\n  .container-fluid .row-fluid {\n    font-family: Tahoma, Arial, sans-serif; }\n  .table {\n  padding: 0;\n  margin: 0; }\n  .table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    background-color: #F0F1F2;\n    padding: .60rem; }\n  .table tr td {\n    font-size: 12px;\n    font-family: Arial, Helvetica, sans-serif; }\n  .table tr td .badge {\n      display: inline-block;\n      padding: .30em .5em;\n      font-size: 75%;\n      font-weight: 700;\n      line-height: 1;\n      text-align: center;\n      white-space: nowrap;\n      vertical-align: baseline;\n      border-radius: 0.2rem; }\n  .table tr td .b-edit {\n      background-color: rgba(78, 216, 240, 0.18);\n      border: 1px solid #3ea5bc; }\n  .table tr td .b-edit:hover {\n      background-color: #4cdaf2; }\n  .table tr td .b-view {\n      background-color: #EEEEEE;\n      border: 1px solid #888a88; }\n  .table tr td .b-view:hover {\n      background-color: #858489; }\n  .table tr td .b-delete {\n      background-color: rgba(238, 0, 10, 0.16);\n      border: 1px solid #d10009; }\n  .table tr td .b-delete:hover {\n      background-color: rgba(255, 25, 23, 0.67); }\n  .table-sm td {\n  padding: 0.4rem 0.8rem; }\n  .c2 {\n  margin-top: 20px; }\n  .c2 .c-header2 {\n    background-color: #e3e3e3;\n    font-weight: bold;\n    color: rgba(16, 16, 16, 0.59);\n    border-bottom: none;\n    padding: 4px 16px 0px; }\n  .c2 .c-body2 {\n    padding: 0;\n    border-bottom: none; }\n  .c2 .bg-light {\n    background-color: #e3e3e3; }\n"
+
+/***/ }),
+
+/***/ "./src/app/servico/list/list.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var servico_service_1 = __webpack_require__("./src/app/servico/servico.service.ts");
+var ListComponent = /** @class */ (function () {
+    function ListComponent(serivcoService) {
+        this.serivcoService = serivcoService;
+        this.listServico = [];
+    }
+    ListComponent.prototype.ngOnInit = function () {
+        this.getListServico();
+        setTimeout(function () {
+            $('#t_servico').DataTable({
+                scrollY: 400,
+                "oLanguage": {
+                    "sLengthMenu": "Mostrar _MENU_ itens por Pag",
+                    "sZeroRecords": "Nenhum registro encontrado",
+                    "sInfo": "Mostrando _START_ ao _END_ de _TOTAL_ itens",
+                    "sInfoEmpty": "Mostrando 0 ao 0 de 0 itens",
+                    "sInfoFiltered": "(filtrado de _MAX_ itens)",
+                    "sSearch": "Procurar: ",
+                    "oPaginate": {
+                        "sFirst": "<<",
+                        "sPrevious": "<",
+                        "sNext": ">",
+                        "sLast": ">>"
+                    }
+                }
+            });
+            $('.ui-widget-header').css('border', '1px solid #e3e3e3');
+            $('#mytable_filter input').attr('size', 30);
+            $('#mytable_filter').css('padding-top', '4px');
+            $(' label').css({ 'margin-bottom': '4px', 'font-size': '14px' });
+            $('.dataTables_info').css({ 'font-size': '14px' });
+            $('.dataTables_paginate').css({ 'float': 'none', 'font-size': '14px' });
+            $('table.dataTable.no-footer').css({ 'border-bottom': 'none' });
+            $('.dataTables_wrapper .ui-toolbar').css('padding', '2px 8px');
+            $('#mytable_length').css('padding', '8px 8px 2px');
+            $('#tbS').removeAttr('hidden', false);
+        }, 800);
+    };
+    ListComponent.prototype.getListServico = function () {
+        var _this = this;
+        this.serivcoService.getListServico().subscribe(function (data) {
+            _this.listServico = data;
+        });
+    };
+    ListComponent = __decorate([
+        core_1.Component({
+            selector: 'app-list',
+            template: __webpack_require__("./src/app/servico/list/list.component.html"),
+            styles: [__webpack_require__("./src/app/servico/list/list.component.scss")]
+        }),
+        __metadata("design:paramtypes", [servico_service_1.ServicoService])
+    ], ListComponent);
+    return ListComponent;
+}());
+exports.ListComponent = ListComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/servico/servico-card/servico-card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card bg-ligth\">\n  <div class=\"card-header\"> Home > Serviço</div>\n  <div class=\"card-body\">\n    <ng-content></ng-content>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/servico/servico-card/servico-card.component.scss":
+/***/ (function(module, exports) {
+
+module.exports = ".container-fluid .row-fluid {\n  margin-top: 20px;\n  font-family: Helvetica, Roboto, Arial, sans-serif; }\n\n.card {\n  position: relative;\n  border-radius: 0px;\n  border-left: none;\n  margin-top: -44px;\n  margin-left: 220px;\n  min-height: 850px; }\n\n.card .card-header {\n    background-color: #FFFFFF;\n    padding: 0.6rem 1.25rem; }\n\n.card .card-body {\n    padding: 0;\n    padding: 0px 20px;\n    background-color: #F0F1F2; }\n"
+
+/***/ }),
+
+/***/ "./src/app/servico/servico-card/servico-card.component.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var ServicoCardComponent = /** @class */ (function () {
+    function ServicoCardComponent() {
+    }
+    ServicoCardComponent.prototype.ngOnInit = function () {
+    };
+    ServicoCardComponent = __decorate([
+        core_1.Component({
+            selector: 'app-servico-card',
+            template: __webpack_require__("./src/app/servico/servico-card/servico-card.component.html"),
+            styles: [__webpack_require__("./src/app/servico/servico-card/servico-card.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ServicoCardComponent);
+    return ServicoCardComponent;
+}());
+exports.ServicoCardComponent = ServicoCardComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/servico/servico-routing.module.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+var list_component_1 = __webpack_require__("./src/app/servico/list/list.component.ts");
+var servicoRoute = [
+    { path: 'srcp/servico', component: list_component_1.ListComponent }
+];
+var ServicoRoutingModule = /** @class */ (function () {
+    function ServicoRoutingModule() {
+    }
+    ServicoRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [router_1.RouterModule.forChild(servicoRoute)],
+            exports: [router_1.RouterModule],
+            declarations: []
+        })
+    ], ServicoRoutingModule);
+    return ServicoRoutingModule;
+}());
+exports.ServicoRoutingModule = ServicoRoutingModule;
+
+
+/***/ }),
+
+/***/ "./src/app/servico/servico.module.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var common_1 = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
+var servico_routing_module_1 = __webpack_require__("./src/app/servico/servico-routing.module.ts");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var servico_service_1 = __webpack_require__("./src/app/servico/servico.service.ts");
+var list_component_1 = __webpack_require__("./src/app/servico/list/list.component.ts");
+var servico_card_component_1 = __webpack_require__("./src/app/servico/servico-card/servico-card.component.ts");
+var ServicoModule = /** @class */ (function () {
+    function ServicoModule() {
+    }
+    ServicoModule = __decorate([
+        core_1.NgModule({
+            declarations: [
+                list_component_1.ListComponent,
+                servico_card_component_1.ServicoCardComponent
+            ],
+            imports: [
+                common_1.CommonModule,
+                servico_routing_module_1.ServicoRoutingModule,
+                forms_1.FormsModule
+            ],
+            providers: [servico_service_1.ServicoService]
+        })
+    ], ServicoModule);
+    return ServicoModule;
+}());
+exports.ServicoModule = ServicoModule;
+
+
+/***/ }),
+
+/***/ "./src/app/servico/servico.service.ts":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var http_1 = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var ServicoService = /** @class */ (function () {
+    function ServicoService(http) {
+        this.http = http;
+        this.url = 'http://localhost:8000/srcp/servico';
+    }
+    ServicoService.prototype.getListServico = function () {
+        return this.http.get(this.url);
+    };
+    ServicoService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient])
+    ], ServicoService);
+    return ServicoService;
+}());
+exports.ServicoService = ServicoService;
 
 
 /***/ }),

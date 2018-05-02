@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'srcp'], function (){
     Route::resource('cliente', 'srcp\ClienteController');
+    Route::resource('servico', 'srcp\ServicoController');
 });
 
 
