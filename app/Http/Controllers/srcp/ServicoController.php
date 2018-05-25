@@ -37,7 +37,7 @@ class ServicoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Servico::create($request->all());
     }
 
     /**
@@ -48,7 +48,8 @@ class ServicoController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Servico::find($id);
+        return $data;
     }
 
     /**
@@ -59,7 +60,8 @@ class ServicoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Servico::find($id);
+        return $data;
     }
 
     /**
@@ -69,9 +71,10 @@ class ServicoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Servico $servico)
     {
-        //
+        $servico->update($request->all());
+        return $servico;
     }
 
     /**
@@ -80,8 +83,9 @@ class ServicoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Servico $servico)
     {
-        //
+        $servico->delete();
+        return $servico;
     }
 }

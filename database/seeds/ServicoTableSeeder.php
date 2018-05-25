@@ -11,6 +11,6 @@ class ServicoTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Models\srcp\Servico::class, 10)->create();
+        factory(\App\Models\srcp\Servico::class, 30)->create();
     }
 }
