@@ -10,11 +10,13 @@
 </head>
 <body>
 <app-root></app-root>
-<script type="text/javascript" src="js/inline.bundle.js"></script>
-<script type="text/javascript" src="js/polyfills.bundle.js"></script>
-<script type="text/javascript" src="js/styles.bundle.js"></script>
-<script type="text/javascript" src="js/scripts.bundle.js"></script>
-<script type="text/javascript" src="js/vendor.bundle.js"></script>
-<script type="text/javascript" src="js/main.bundle.js"></script>
+
+<script type="text/javascript" src="js/runtime.js"></script>
+<script type="text/javascript" src="js/polyfills.js"></script>
+<script type="text/javascript" src="js/styles.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/vendor.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>

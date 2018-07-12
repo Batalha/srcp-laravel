@@ -15,10 +15,11 @@ Route::get('/', function () {
     return view('srcp');
 });
 
-Route::group(['prefix' => 'srcp'], function (){
+Route::group(['prefix' => 'srcp'], function () {
     Route::resource('cliente', 'srcp\ClienteController');
     Route::resource('servico', 'srcp\ServicoController');
+    Route::resource('chamado', 'srcp\ChamadoController');
 });
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get(' / home', 'HomeController@index')->name('home');

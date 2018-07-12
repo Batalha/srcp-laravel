@@ -4,7 +4,7 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\srcp\Cliente::class, function (Faker $faker) {
     return [
-        'nome'=>$faker->name,
+        'nome'=>$faker->word,
         'cpf_cnpj'=>$faker->phoneNumber,
         'telefone'=>$faker->phoneNumber,
         'celular'=>$faker->phoneNumber,
