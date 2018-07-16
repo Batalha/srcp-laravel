@@ -147,14 +147,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
 /* harmony import */ var _servico_servico_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./servico/servico.module */ "./src/app/servico/servico.module.ts");
 /* harmony import */ var _chamado_chamado_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./chamado/chamado.module */ "./src/app/chamado/chamado.module.ts");
-/* harmony import */ var _bootstrap_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./bootstrap/dropdown/dropdown.component */ "./src/app/bootstrap/dropdown/dropdown.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -173,8 +171,7 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
                 _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"],
-                _bootstrap_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_10__["DropdownComponent"]
+                _login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -202,7 +199,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  alert-servico works!\n</p>\n"
+module.exports = "<p>\r\n  alert-servico works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -369,69 +366,6 @@ var AlertComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/bootstrap/dropdown/dropdown.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/bootstrap/dropdown/dropdown.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/bootstrap/dropdown/dropdown.component.scss":
-/*!************************************************************!*\
-  !*** ./src/app/bootstrap/dropdown/dropdown.component.scss ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/bootstrap/dropdown/dropdown.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/app/bootstrap/dropdown/dropdown.component.ts ***!
-  \**********************************************************/
-/*! exports provided: DropdownComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DropdownComponent", function() { return DropdownComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var DropdownComponent = /** @class */ (function () {
-    function DropdownComponent() {
-    }
-    DropdownComponent.prototype.ngOnInit = function () {
-    };
-    DropdownComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-dropdown',
-            template: __webpack_require__(/*! ./dropdown.component.html */ "./src/app/bootstrap/dropdown/dropdown.component.html"),
-            styles: [__webpack_require__(/*! ./dropdown.component.scss */ "./src/app/bootstrap/dropdown/dropdown.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], DropdownComponent);
-    return DropdownComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/bootstrap/message.service.ts":
 /*!**********************************************!*\
   !*** ./src/app/bootstrap/message.service.ts ***!
@@ -592,12 +526,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _chamado_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chamado-routing.module */ "./src/app/chamado/chamado-routing.module.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _list_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./list/list.component */ "./src/app/chamado/list/list.component.ts");
-/* harmony import */ var _chamado_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chamado.service */ "./src/app/chamado/chamado.service.ts");
-/* harmony import */ var _chamado_card_chamado_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./chamado-card/chamado-card.component */ "./src/app/chamado/chamado-card/chamado-card.component.ts");
-/* harmony import */ var _view_view_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./view/view.component */ "./src/app/chamado/view/view.component.ts");
-/* harmony import */ var _new_new_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./new/new.component */ "./src/app/chamado/new/new.component.ts");
-/* harmony import */ var _filter_pipe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./filter.pipe */ "./src/app/chamado/filter.pipe.ts");
+/* harmony import */ var _ngui_auto_complete__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngui/auto-complete */ "./node_modules/@ngui/auto-complete/dist/index.js");
+/* harmony import */ var _ngui_auto_complete__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_ngui_auto_complete__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _list_list_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./list/list.component */ "./src/app/chamado/list/list.component.ts");
+/* harmony import */ var _chamado_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./chamado.service */ "./src/app/chamado/chamado.service.ts");
+/* harmony import */ var _chamado_card_chamado_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./chamado-card/chamado-card.component */ "./src/app/chamado/chamado-card/chamado-card.component.ts");
+/* harmony import */ var _view_view_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./view/view.component */ "./src/app/chamado/view/view.component.ts");
+/* harmony import */ var _new_new_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./new/new.component */ "./src/app/chamado/new/new.component.ts");
+/* harmony import */ var _filter_pipe__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./filter.pipe */ "./src/app/chamado/filter.pipe.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -614,24 +550,26 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var ChamadoModule = /** @class */ (function () {
     function ChamadoModule() {
     }
     ChamadoModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _list_list_component__WEBPACK_IMPORTED_MODULE_4__["ListComponent"],
-                _chamado_card_chamado_card_component__WEBPACK_IMPORTED_MODULE_6__["ChamadoCardComponent"],
-                _new_new_component__WEBPACK_IMPORTED_MODULE_8__["NewComponent"],
-                _view_view_component__WEBPACK_IMPORTED_MODULE_7__["ViewComponent"],
-                _filter_pipe__WEBPACK_IMPORTED_MODULE_9__["FilterPipe"]
+                _list_list_component__WEBPACK_IMPORTED_MODULE_5__["ListComponent"],
+                _chamado_card_chamado_card_component__WEBPACK_IMPORTED_MODULE_7__["ChamadoCardComponent"],
+                _new_new_component__WEBPACK_IMPORTED_MODULE_9__["NewComponent"],
+                _view_view_component__WEBPACK_IMPORTED_MODULE_8__["ViewComponent"],
+                _filter_pipe__WEBPACK_IMPORTED_MODULE_10__["FilterPipe"]
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _chamado_routing_module__WEBPACK_IMPORTED_MODULE_2__["ChamadoRoutingModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _ngui_auto_complete__WEBPACK_IMPORTED_MODULE_4__["NguiAutoCompleteModule"]
             ],
-            providers: [_chamado_service__WEBPACK_IMPORTED_MODULE_5__["ChamadoService"]]
+            providers: [_chamado_service__WEBPACK_IMPORTED_MODULE_6__["ChamadoService"]]
         })
     ], ChamadoModule);
     return ChamadoModule;
@@ -741,7 +679,7 @@ var FilterPipe = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chamado-card>\n    <div class=\"container-fluid\">\n        <div class=\"row-fluid\">\n            <div class=\"row\">\n                <div class=\"col-md-2\">\n                    <button class=\"btn btn-outline-success\" routerLink=\"/srcp/chamado/new\">\n                        <img src=\"js/assets/svg/si-glyph-adicionar.svg\"/> Adicionar OS\n                    </button>\n                </div>\n                <!--div *ngIf=\"message\" class=\"col-md-8 text-left\">\n                    <app-alert-servico [timeout]=\"4000\">{{message}}</app-alert-servico>\n                </div-->\n            </div>\n            <div class=\"card c2 bg-light\">\n                <div class=\"card-header c-header2\">Ordem de Serviços</div>\n                <div class=\"card-body c-body2\">\n                    <table id=\"chamado_table\" class=\"table table-sm display\" data-order='[[ 0, \"desc\" ]]'>\n                    <!--<table class=\"table table-sm display\">-->\n                        <thead>\n                        <tr>\n                            <th>#</th>\n                            <th>Cliente</th>\n                            <th>Data Inicial</th>\n                            <th>Data Final</th>\n                            <th>Estatus</th>\n                            <th>Ação</th>\n                        </tr>\n                        </thead>\n                        <tbody id=\"tbC\">\n                        <!--<tbody id=\"tbC\">-->\n                        <tr *ngFor=\"let chamado of listChamados\">\n                            <td>{{chamado.id}}</td>\n                            <td>{{chamado.cliente.nome}}</td>\n                            <td>{{chamado.data_inicial}}</td>\n                            <td>{{chamado.data_final}}</td>\n                            <td>{{chamado.status}}</td>\n\n                            <td>\n                                <a routerLink='/srcp/chamado/{{chamado.id}}/view' class=\"badge b-view badge-secundario\">\n                                    <img src=\"js/assets/svg/si-glyph-view.svg\" alt=\"\">\n                                </a>\n                                <!--<a routerLink='/srcp/cliente/{{chamado.id}}/edit' class=\"badge b-edit badge-info\">-->\n                                    <!--<img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\">-->\n                                <!--</a>-->\n                                <!--<a href=\"javascript:void(0)\" (click)=\"destroy(chamado.id,i)\" class=\"badge b-delete badge-danger\">-->\n                                    <!--<img src=\"js/assets/svg/si-glyph-delete.svg\" alt=\"\">-->\n                                <!--</a>-->\n                            </td>\n                        </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n</app-chamado-card>\n"
+module.exports = "<app-chamado-card>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row-fluid\">\r\n            <div class=\"row\">\r\n                <div class=\"col-md-2\">\r\n                    <button class=\"btn btn-outline-success\" routerLink=\"/srcp/chamado/new\">\r\n                        <img src=\"js/assets/svg/si-glyph-adicionar.svg\"/> Adicionar OS\r\n                    </button>\r\n                </div>\r\n                <!--div *ngIf=\"message\" class=\"col-md-8 text-left\">\r\n                    <app-alert-servico [timeout]=\"4000\">{{message}}</app-alert-servico>\r\n                </div-->\r\n            </div>\r\n            <div class=\"card c2 bg-light\">\r\n                <div class=\"card-header c-header2\">Ordem de Serviços</div>\r\n                <div class=\"card-body c-body2\">\r\n                    <table id=\"chamado_table\" class=\"table table-sm display\" data-order='[[ 0, \"desc\" ]]'>\r\n                    <!--<table class=\"table table-sm display\">-->\r\n                        <thead>\r\n                        <tr>\r\n                            <th>#</th>\r\n                            <th>Cliente</th>\r\n                            <th>Data Inicial</th>\r\n                            <th>Data Final</th>\r\n                            <th>Estatus</th>\r\n                            <th>Ação</th>\r\n                        </tr>\r\n                        </thead>\r\n                        <tbody id=\"tbC\">\r\n                        <!--<tbody id=\"tbC\">-->\r\n                        <tr *ngFor=\"let chamado of listChamados\">\r\n                            <td>{{chamado.id}}</td>\r\n                            <td>{{chamado.cliente.nome}}</td>\r\n                            <td>{{chamado.data_inicial}}</td>\r\n                            <td>{{chamado.data_final}}</td>\r\n                            <td>{{chamado.status}}</td>\r\n\r\n                            <td>\r\n                                <a routerLink='/srcp/chamado/{{chamado.id}}/view' class=\"badge b-view badge-secundario\">\r\n                                    <img src=\"js/assets/svg/si-glyph-view.svg\" alt=\"\">\r\n                                </a>\r\n                                <!--<a routerLink='/srcp/cliente/{{chamado.id}}/edit' class=\"badge b-edit badge-info\">-->\r\n                                    <!--<img src=\"js/assets/svg/si-glyph-edit.svg\" alt=\"\">-->\r\n                                <!--</a>-->\r\n                                <!--<a href=\"javascript:void(0)\" (click)=\"destroy(chamado.id,i)\" class=\"badge b-delete badge-danger\">-->\r\n                                    <!--<img src=\"js/assets/svg/si-glyph-delete.svg\" alt=\"\">-->\r\n                                <!--</a>-->\r\n                            </td>\r\n                        </tr>\r\n                        </tbody>\r\n                    </table>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</app-chamado-card>\r\n"
 
 /***/ }),
 
@@ -752,7 +690,7 @@ module.exports = "<app-chamado-card>\n    <div class=\"container-fluid\">\n     
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".container-fluid {\n  margin: 25px 0px 0px 0px;\n  padding: 0; }\n  .container-fluid .row-fluid {\n    font-family: Tahoma, Arial, sans-serif; }\n  .table {\n  padding: 0;\n  margin: 0; }\n  .table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    background-color: #F0F1F2;\n    padding: .60rem; }\n  .table tr td {\n    font-size: 12px;\n    font-family: Arial, Helvetica, sans-serif; }\n  .table tr td .badge {\n      display: inline-block;\n      padding: .30em .5em;\n      font-size: 75%;\n      font-weight: 700;\n      line-height: 1;\n      text-align: center;\n      white-space: nowrap;\n      vertical-align: baseline;\n      border-radius: 0.2rem; }\n  .table tr td .b-edit {\n      background-color: rgba(78, 216, 240, 0.18);\n      border: 1px solid #3ea5bc; }\n  .table tr td .b-edit:hover {\n      background-color: #4cdaf2; }\n  .table tr td .b-view {\n      background-color: #EEEEEE;\n      border: 1px solid #888a88; }\n  .table tr td .b-view:hover {\n      background-color: #858489; }\n  .table tr td .b-delete {\n      background-color: rgba(238, 0, 10, 0.16);\n      border: 1px solid #d10009; }\n  .table tr td .b-delete:hover {\n      background-color: rgba(255, 25, 23, 0.67); }\n  .table-sm td {\n  padding: 0.4rem 0.8rem; }\n  .c2 {\n  margin-top: 20px; }\n  .c2 .c-header2 {\n    background-color: #e3e3e3;\n    font-weight: bold;\n    color: rgba(16, 16, 16, 0.59);\n    border-bottom: none;\n    padding: 4px 16px 0px; }\n  .c2 .c-body2 {\n    padding: 0;\n    border-bottom: none; }\n  .c2 .bg-light {\n    background-color: #e3e3e3; }\n"
+module.exports = ".container-fluid {\n  margin: 25px 0px 0px 0px;\n  padding: 0; }\n  .container-fluid .row-fluid {\n    font-family: Tahoma, Arial, sans-serif; }\n  .table {\n  padding: 0;\n  margin: 0; }\n  .table thead th {\n    font-size: 12px;\n    text-align: center;\n    color: rgba(103, 87, 57, 0.8);\n    background-color: #F0F1F2;\n    padding: .60rem; }\n  .table tr td {\n    font-size: 12px;\n    font-family: Arial, Helvetica, sans-serif; }\n  .table tr td .badge {\n      display: inline-block;\n      padding: .30em .5em;\n      font-size: 75%;\n      font-weight: 700;\n      line-height: 1;\n      text-align: center;\n      white-space: nowrap;\n      vertical-align: baseline;\n      border-radius: 0.2rem; }\n  .table tr td .b-edit {\n      background-color: rgba(78, 216, 240, 0.18);\n      border: 1px solid #3ea5bc; }\n  .table tr td .b-edit:hover {\n      background-color: #4cdaf2; }\n  .table tr td .b-view {\n      background-color: #EEEEEE;\n      border: 1px solid #888a88; }\n  .table tr td .b-view:hover {\n      background-color: #858489; }\n  .table tr td .b-delete {\n      background-color: rgba(238, 0, 10, 0.16);\n      border: 1px solid #d10009; }\n  .table tr td .b-delete:hover {\n      background-color: rgba(255, 25, 23, 0.67); }\n  .table-sm td {\n  padding: 0.4rem 0.8rem; }\n  .c2 {\n  margin-top: 20px; }\n  .c2 .c-header2 {\n    background-color: #e3e3e3;\n    font-weight: bold;\n    color: rgba(16, 16, 16, 0.59);\n    border-bottom: none;\n    padding: 4px 16px 0px; }\n  .c2 .c-body2 {\n    padding: 0;\n    border-bottom: none; }\n  .c2 .bg-light {\n    background-color: #e3e3e3; }\n  .data-row {\n  margin: -2px -5px; }\n"
 
 /***/ }),
 
@@ -789,18 +727,18 @@ var ListComponent = /** @class */ (function () {
         setTimeout(function () {
             $('#chamado_table').DataTable({
                 scrollY: 400,
-                "oLanguage": {
-                    "sLengthMenu": "Mostrar _MENU_ itens por Pag",
-                    "sZeroRecords": "Nenhum registro encontrado",
-                    "sInfo": "Mostrando _START_ ao _END_ de _TOTAL_ itens",
-                    "sInfoEmpty": "Mostrando 0 ao 0 de 0 itens",
-                    "sInfoFiltered": "(filtrado de _MAX_ itens)",
-                    "sSearch": "Procurar: ",
-                    "oPaginate": {
-                        "sFirst": "<<",
-                        "sPrevious": "<",
-                        "sNext": ">",
-                        "sLast": ">>"
+                'oLanguage': {
+                    'sLengthMenu': 'Mostrar _MENU_ itens por Pag',
+                    'sZeroRecords': 'Nenhum registro encontrado',
+                    'sInfo': 'Mostrando _START_ ao _END_ de _TOTAL_ itens',
+                    'sInfoEmpty': 'Mostrando 0 ao 0 de 0 itens',
+                    'sInfoFiltered': '(filtrado de _MAX_ itens)',
+                    'sSearch': 'Procurar: ',
+                    'oPaginate': {
+                        'sFirst': '<<',
+                        'sPrevious': '<',
+                        'sNext': '>',
+                        'sLast': '>>'
                     }
                 }
             });
@@ -845,7 +783,7 @@ var ListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chamado-card>\n\n    <div class=\"container-fluid\">\n        <div class=\"row-fluid\">\n            <form id=\"filter\" action=\"\" #f=\"ngForm\" (submit)=\"save()\">\n                <input type=\"hidden\" name=\"id\" [(ngModel)]=\"chamado.id\">\n                <div class=\"card c2 bg-light\">\n                    <div class=\"card-header c-header2\">Ordem de Serviços</div>\n                    <div class=\"card-body c-body2\">\n                        <div class=\"form-row\">\n                            <div class=\"form-group col-md-6\">\n                                <label for=\"cliente\" class=\"control-label\">Cliente</label>\n                                <input class=\"form-control\" type=\"text\" id=\"cliente\" name=\"cliente_id\"\n                                [(ngModel)]=\"chamado.cliente_id\" placeholder=\"Nome do Cliente\"\n                                 required\n                                >\n                            </div>\n\n                        </div>\n                        <div class=\"form-row\">\n                            <div class=\"form-group col-md-3\">\n                                <label for=\"status\" class=\"control-label\">Status</label>\n                                <select class=\"form-control\" id=\"status\" name=\"status\" required\n                                       [(ngModel)]=\"chamado.status\">\n                                    <option value=\"1\">Aberto</option>\n                                    <option value=\"2\">Fechado</option>\n                                    <option value=\"3\">Em Andamento</option>\n                                </select>\n                            </div>\n                            <div class=\"form-group col-md-3\">\n                                <label for=\"data_incial\" class=\"control-label\">Data Inicial</label>\n                                <input class=\"form-control\" type=\"date\" id=\"data_incial\" name=\"data_incial\"\n                                       [(ngModel)]=\"chamado.data_inicial\" placeholder=\"Data Inicial\"\n                                       required\n                                >\n                            </div>\n                            <div class=\"form-group col-md-3\">\n                                <label for=\"data_final\" class=\"control-label\">Data Final</label>\n                                <input class=\"form-control\" type=\"date\" id=\"data_final\" name=\"data_final\"\n                                       [(ngModel)]=\"chamado.data_final\" placeholder=\"Data Final\"\n                                       required\n                                >\n                            </div>\n                        </div>\n                        <div class=\"form-row\">\n                            <div class=\"form-group col-md-6\">\n                                <label for=\"descricao\" class=\"control-label\">Descriçoes</label>\n                                <textarea class=\"form-control\" rows=\"5\" id=\"descricao\" name=\"descricao\" [(ngModel)]=\"chamado.descricao\" placeholder=\"Descricao Produto/Serviço\"></textarea>\n                            </div>\n                            <div class=\"form-group col-md-6\">\n                                <label for=\"defeito\" class=\"control-label\">Defeito</label>\n                                <textarea class=\"form-control\" rows=\"5\" id=\"defeito\" name=\"defeito\" [(ngModel)]=\"chamado.defeito\"></textarea>\n                            </div>\n                        </div>\n                        <div class=\"form-row\">\n                            <div class=\"form-group col-md-6\">\n                                <label for=\"observacao\" class=\"control-label\">Observação</label>\n                                <textarea class=\"form-control\" rows=\"5\" id=\"observacao\" name=\"observacao\" [(ngModel)]=\"chamado.observacao\" placeholder=\"Observação\"></textarea>\n                            </div>\n                            <div class=\"form-group col-md-6\">\n                                <label for=\"laudo\" class=\"control-label\">Laudo Tecnico</label>\n                                <textarea class=\"form-control\" rows=\"5\" id=\"laudo\" name=\"laudo\" [(ngModel)]=\"chamado.laudo\"></textarea>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <button *ngIf=\"!chamado.id\" type=\"submit\" class=\"btn btn-outline-success\"\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\n                    Salvar Ordem de Serviço\n                </button>\n            </form>\n        </div>\n    </div>\n\n</app-chamado-card>\n"
+module.exports = "<app-chamado-card>\r\n\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row-fluid\">\r\n            <form id=\"filter\" action=\"\" #f=\"ngForm\" (submit)=\"save()\">\r\n                <input type=\"hidden\" name=\"id\" [(ngModel)]=\"chamado.id\">\r\n                <div class=\"card c2 bg-light\">\r\n                    <div class=\"card-header c-header2\">Ordem de Serviços</div>\r\n                    <div class=\"card-body c-body2\">\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-6\">\r\n                                <label for=\"cliente_id\" class=\"control-label\">Cliente</label>\r\n                                    <input\r\n                                            ngui-auto-complete\r\n                                            class=\"form-control\"\r\n                                            id = \"cliente_id\"\r\n                                            name=\"cliente_id\"\r\n                                            placeholder=\"Search Cliente\"\r\n                                            [(ngModel)] = \"dadosCliente\"\r\n                                            [source] = \"nomeCliente\"\r\n                                            display-property-name=\"nome\"\r\n                                            [list-formatter]=\"renderCliente\"\r\n                                            [header-item-template]=\"clienteHeaderTemplate\"\r\n                                    />\r\n                            </div>\r\n\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"status\" class=\"control-label\">Status</label>\r\n                                <select class=\"form-control\" id=\"status\" name=\"status\" required\r\n                                       [(ngModel)]=\"chamado.status\">\r\n                                    <option value=\"1\">Aberto</option>\r\n                                    <option value=\"2\">Fechado</option>\r\n                                    <option value=\"3\">Em Andamento</option>\r\n                                </select>\r\n                            </div>\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"data_incial\" class=\"control-label\">Data Inicial</label>\r\n                                <input class=\"form-control\" type=\"date\" id=\"data_incial\" name=\"data_incial\"\r\n                                       [(ngModel)]=\"chamado.data_inicial\" placeholder=\"Data Inicial\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                            <div class=\"form-group col-md-3\">\r\n                                <label for=\"data_final\" class=\"control-label\">Data Final</label>\r\n                                <input class=\"form-control\" type=\"date\" id=\"data_final\" name=\"data_final\"\r\n                                       [(ngModel)]=\"chamado.data_final\" placeholder=\"Data Final\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-6\">\r\n                                <label for=\"descricao\" class=\"control-label\">Descriçoes</label>\r\n                                <textarea class=\"form-control\" rows=\"5\" id=\"descricao\" name=\"descricao\" [(ngModel)]=\"chamado.descricao\" placeholder=\"Descricao Produto/Serviço\"></textarea>\r\n                            </div>\r\n                            <div class=\"form-group col-md-6\">\r\n                                <label for=\"defeito\" class=\"control-label\">Defeito</label>\r\n                                <textarea class=\"form-control\" rows=\"5\" id=\"defeito\" name=\"defeito\" [(ngModel)]=\"chamado.defeito\"></textarea>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-6\">\r\n                                <label for=\"observacao\" class=\"control-label\">Observação</label>\r\n                                <textarea class=\"form-control\" rows=\"5\" id=\"observacao\" name=\"observacao\" [(ngModel)]=\"chamado.observacao\" placeholder=\"Observação\"></textarea>\r\n                            </div>\r\n                            <div class=\"form-group col-md-6\">\r\n                                <label for=\"laudo\" class=\"control-label\">Laudo Tecnico</label>\r\n                                <textarea class=\"form-control\" rows=\"5\" id=\"laudo\" name=\"laudo\" [(ngModel)]=\"chamado.laudo\"></textarea>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <button *ngIf=\"!chamado.id\" type=\"submit\" class=\"btn btn-outline-success\"\r\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\r\n                    Salvar Ordem de Serviço\r\n                </button>\r\n            </form>\r\n        </div>\r\n    </div>\r\n\r\n</app-chamado-card>\r\n"
 
 /***/ }),
 
@@ -856,7 +794,7 @@ module.exports = "<app-chamado-card>\n\n    <div class=\"container-fluid\">\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".c2 {\n  margin-top: 20px;\n  margin-bottom: 20px; }\n\n.c-header2 {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  padding: .60rem 1.25rem; }\n\n.control-label {\n  font-size: 13px;\n  font-weight: 700;\n  color: rgba(103, 87, 57, 0.8); }\n\n.ng-invalid.ng-touched:not(form) {\n  border: 1px solid red; }\n"
+module.exports = ".c2 {\n  margin-top: 20px;\n  margin-bottom: 20px; }\n\n.c-header2 {\n  font-weight: bold;\n  color: rgba(103, 87, 57, 0.8);\n  padding: .60rem 1.25rem; }\n\n.control-label {\n  font-size: 13px;\n  font-weight: 700;\n  color: rgba(103, 87, 57, 0.8); }\n\n.ng-invalid.ng-touched:not(form) {\n  border: 1px solid red; }\n\n.format {\n  font-size: 14px;\n  font-weight: bold;\n  background-color: #bfbfbf;\n  padding: 5px; }\n"
 
 /***/ }),
 
@@ -874,6 +812,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cliente_cliente_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../cliente/cliente.service */ "./src/app/cliente/cliente.service.ts");
 /* harmony import */ var _chamado_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../chamado.service */ "./src/app/chamado/chamado.service.ts");
 /* harmony import */ var _bootstrap_message_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../bootstrap/message.service */ "./src/app/bootstrap/message.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -887,12 +826,16 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var NewComponent = /** @class */ (function () {
-    function NewComponent(dadosChamados, listCliente, messageService) {
+    function NewComponent(dadosChamados, router, listCliente, messageService) {
         this.dadosChamados = dadosChamados;
+        this.router = router;
         this.listCliente = listCliente;
         this.messageService = messageService;
         this.nomeCliente = [];
+        this.dadosCliente = '';
+        //
         this.chamado = {
             id: null,
             cliente_id: '',
@@ -904,38 +847,42 @@ var NewComponent = /** @class */ (function () {
             observacao: '',
             laudo: ''
         };
+        this.clienteHeaderTemplate = "\n        <div class=\"form-row format\">\n                <div class=\"col-md-6\">Nome</div>\n                <div class=\"col-md-6\">Telefone</div>\n        </div>\n    ";
     }
+    NewComponent.prototype.renderCliente = function (data) {
+        var html = "\n        <div class=\"form-row\">\n                <div class=\"col-md-6\">" + data.nome + "</div>\n                <div class=\"col-md-6\">" + data.telefone + "</div>\n        </div>\n        ";
+        return html;
+    };
     NewComponent.prototype.ngOnInit = function () {
         this.getListaCliente();
     };
     NewComponent.prototype.getListaCliente = function () {
         var _this = this;
         this.listCliente.getClienteList().subscribe(function (data) {
-            for (var n = 0; n < data.length; n++) {
-                _this.nomeCliente.push(data[n].nome);
-            }
-            var teste = $('#cliente').autocomplete({
-                delay: 200,
-                minLength: 2,
-                source: _this.nomeCliente
-            });
-            console.log(teste[0]);
+            _this.nomeCliente = data;
         });
     };
     NewComponent.prototype.save = function () {
-        console.log(this.chamado);
-        // this.dadosChamados.save(this.chamado)
-        //     .subscribe(() => {
-        // this.messageService.message = ''
-        // })
+        var _this = this;
+        this.chamado.cliente_id = this.json(this.dadosCliente['id']);
+        this.dadosChamados.save(this.chamado)
+            .subscribe(function () {
+            _this.messageService.message = 'OS Salvo com sucesso.';
+            _this.router.navigate(['/srcp/chamado']);
+        });
+    };
+    NewComponent.prototype.json = function (obj) {
+        return JSON.stringify(obj, null, '  ');
     };
     NewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-new',
             template: __webpack_require__(/*! ./new.component.html */ "./src/app/chamado/new/new.component.html"),
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
             styles: [__webpack_require__(/*! ./new.component.scss */ "./src/app/chamado/new/new.component.scss")]
         }),
         __metadata("design:paramtypes", [_chamado_service__WEBPACK_IMPORTED_MODULE_2__["ChamadoService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
             _cliente_cliente_service__WEBPACK_IMPORTED_MODULE_1__["ClienteService"],
             _bootstrap_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"]])
     ], NewComponent);
@@ -953,7 +900,7 @@ var NewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-chamado-card>\n    <div class=\"container-fluid\">\n        <div class=\"col-md-12\">\n            <div class=\"card c2 bg-light\">\n                <div class=\"card-header c-header2\">Ordem de Serviço</div>\n                <div class=\"card-body c-body2\">\n\n                    <hr>\n                    <h6>Cliente</h6>\n                    <span>\n                    {{os.cliente.nome}} <br>\n                    {{os.cliente.endereco}}, {{os.cliente.numero}} <br>\n                    {{os.cliente.estado}}\n                    </span>\n                    <hr>\n\n                    <h6>Descrição</h6>\n                    <span>{{os.descricao}}</span>\n\n                    <hr>\n                    <h6>Defeito</h6>\n                    <span>{{os.defeito}}</span>\n\n                    <hr>\n                    <h6>Laudo Tecnico </h6>\n                    <span>{{os.laudo}}</span>\n\n                    <hr>\n\n                    <h6>Observaçoes</h6>\n                    <span>{{os.observacao}}</span>\n\n\n\n                </div>\n            </div>\n        </div>\n    </div>\n\n</app-chamado-card>\n\n"
+module.exports = "<app-chamado-card>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"col-md-12\">\r\n            <div class=\"card c2 bg-light\">\r\n                <div class=\"card-header c-header2\">Ordem de Serviço</div>\r\n                <div class=\"card-body c-body2\">\r\n\r\n                    <hr>\r\n                    <h6>Cliente</h6>\r\n                    <span>\r\n                    {{os.cliente.nome}} <br>\r\n                    {{os.cliente.endereco}}, {{os.cliente.numero}} <br>\r\n                    {{os.cliente.estado}}\r\n                    </span>\r\n                    <hr>\r\n\r\n                    <h6>Descrição</h6>\r\n                    <span>{{os.descricao}}</span>\r\n\r\n                    <hr>\r\n                    <h6>Defeito</h6>\r\n                    <span>{{os.defeito}}</span>\r\n\r\n                    <hr>\r\n                    <h6>Laudo Tecnico </h6>\r\n                    <span>{{os.laudo}}</span>\r\n\r\n                    <hr>\r\n\r\n                    <h6>Observaçoes</h6>\r\n                    <span>{{os.observacao}}</span>\r\n\r\n\r\n\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n</app-chamado-card>\r\n\r\n"
 
 /***/ }),
 
@@ -1353,18 +1300,18 @@ var ListComponent = /** @class */ (function () {
         setTimeout(function () {
             this.mytable = $('#mytable').DataTable({
                 scrollY: 400,
-                "oLanguage": {
-                    "sLengthMenu": "Mostrar _MENU_ itens por Pag",
-                    "sZeroRecords": "Nenhum registro encontrado",
-                    "sInfo": "Mostrando _START_ ao _END_ de _TOTAL_ itens",
-                    "sInfoEmpty": "Mostrando 0 ao 0 de 0 itens",
-                    "sInfoFiltered": "(filtrado de _MAX_ itens)",
-                    "sSearch": "Procurar: ",
-                    "oPaginate": {
-                        "sFirst": "<<",
-                        "sPrevious": "<",
-                        "sNext": ">",
-                        "sLast": ">>"
+                'oLanguage': {
+                    'sLengthMenu': 'Mostrar _MENU_ itens por Pag',
+                    'sZeroRecords': 'Nenhum registro encontrado',
+                    'sInfo': 'Mostrando _START_ ao _END_ de _TOTAL_ itens',
+                    'sInfoEmpty': 'Mostrando 0 ao 0 de 0 itens',
+                    'sInfoFiltered': '(filtrado de _MAX_ itens)',
+                    'sSearch': 'Procurar: ',
+                    'oPaginate': {
+                        'sFirst': '<<',
+                        'sPrevious': '<',
+                        'sNext': '>',
+                        'sLast': '>>'
                     }
                 }
             });
@@ -1812,18 +1759,18 @@ var ListComponent = /** @class */ (function () {
         setTimeout(function () {
             $('#t_servico').DataTable({
                 scrollY: 400,
-                "oLanguage": {
-                    "sLengthMenu": "Mostrar _MENU_ itens por Pag",
-                    "sZeroRecords": "Nenhum registro encontrado",
-                    "sInfo": "Mostrando _START_ ao _END_ de _TOTAL_ itens",
-                    "sInfoEmpty": "Mostrando 0 ao 0 de 0 itens",
-                    "sInfoFiltered": "(filtrado de _MAX_ itens)",
-                    "sSearch": "Procurar: ",
-                    "oPaginate": {
-                        "sFirst": "<<",
-                        "sPrevious": "<",
-                        "sNext": ">",
-                        "sLast": ">>"
+                'oLanguage': {
+                    'sLengthMenu': 'Mostrar _MENU_ itens por Pag',
+                    'sZeroRecords': 'Nenhum registro encontrado',
+                    'sInfo': 'Mostrando _START_ ao _END_ de _TOTAL_ itens',
+                    'sInfoEmpty': 'Mostrando 0 ao 0 de 0 itens',
+                    'sInfoFiltered': '(filtrado de _MAX_ itens)',
+                    'sSearch': 'Procurar: ',
+                    'oPaginate': {
+                        'sFirst': '<<',
+                        'sPrevious': '<',
+                        'sNext': '>',
+                        'sLast': '>>'
                     }
                 }
             });
@@ -1876,7 +1823,7 @@ var ListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-servico-card>\n    <div class=\"container-fluid\">\n        <div class=\"row-fluid\">\n            <form action=\"\" #f=\"ngForm\">\n                <input type=\"hidden\" name=\"id\" [(ngModel)]=\"servico.id\">\n                <div class=\"card c2 bg-light\">\n                    <div class=\"card-header c-header2\">{{servico.id ? 'Alterar Serviço': 'Novo Serviço'}}</div>\n                    <div class=\"card-body c-body2\">\n                        <div class=\"form-row\">\n                            <div class=\"form-group col-md-4\">\n                                <label for=\"nome\" class=\"control-label\">Nome do Serviço</label>\n                                <input class=\"form-control\" type=\"text\" id=\"nome\" name=\"nome\"\n                                       [(ngModel)]=\"servico.nome\"\n                                       required\n                                >\n                            </div>\n                        </div>\n                        <div class=\"form-row\">\n                            <div class=\"form-group col-md-4\">\n                                <label for=\"preco\" class=\"control-label\">Preço do Serviço</label>\n                                <input class=\"form-control\" type=\"text\" id=\"preco\" name=\"preco\"\n                                       [(ngModel)]=\"servico.preco\"\n                                       required\n                                >\n                            </div>\n                        </div>\n                        <div class=\"form-row\">\n                            <div class=\"form-group col-md-4\">\n                                <label for=\"descricao\" class=\"control-label\">Descrição do Serviço</label>\n                                <input class=\"form-control\" type=\"text\" id=\"descricao\" name=\"descricao\"\n                                       [(ngModel)]=\"servico.descricao\"\n                                       required\n                                >\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <button *ngIf=\"servico.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"updateServico()\"\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\n                    Alterar Serviço\n                </button>\n                <button *ngIf=\"!servico.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"saveServico()\"\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\n                    Salvar Serviço\n                </button>\n                <button class=\"btn btn-outline-secondary\" routerLink=\"/srcp/servico\">\n                    <img src=\"js/assets/svg/si-glyph-backward-page.svg\"/> Voltar\n                </button>\n            </form>\n        </div>\n\n    </div>\n</app-servico-card>"
+module.exports = "<app-servico-card>\r\n    <div class=\"container-fluid\">\r\n        <div class=\"row-fluid\">\r\n            <form action=\"\" #f=\"ngForm\">\r\n                <input type=\"hidden\" name=\"id\" [(ngModel)]=\"servico.id\">\r\n                <div class=\"card c2 bg-light\">\r\n                    <div class=\"card-header c-header2\">{{servico.id ? 'Alterar Serviço': 'Novo Serviço'}}</div>\r\n                    <div class=\"card-body c-body2\">\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-4\">\r\n                                <label for=\"nome\" class=\"control-label\">Nome do Serviço</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"nome\" name=\"nome\"\r\n                                       [(ngModel)]=\"servico.nome\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-4\">\r\n                                <label for=\"preco\" class=\"control-label\">Preço do Serviço</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"preco\" name=\"preco\"\r\n                                       [(ngModel)]=\"servico.preco\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-row\">\r\n                            <div class=\"form-group col-md-4\">\r\n                                <label for=\"descricao\" class=\"control-label\">Descrição do Serviço</label>\r\n                                <input class=\"form-control\" type=\"text\" id=\"descricao\" name=\"descricao\"\r\n                                       [(ngModel)]=\"servico.descricao\"\r\n                                       required\r\n                                >\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <button *ngIf=\"servico.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"updateServico()\"\r\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\r\n                    Alterar Serviço\r\n                </button>\r\n                <button *ngIf=\"!servico.id\" type=\"button\" class=\"btn btn-outline-success\" (click)=\"saveServico()\"\r\n                        [disabled]=\"!f.valid\"><img src=\"js/assets/svg/si-glyph-floppy-disk.svg\"/>\r\n                    Salvar Serviço\r\n                </button>\r\n                <button class=\"btn btn-outline-secondary\" routerLink=\"/srcp/servico\">\r\n                    <img src=\"js/assets/svg/si-glyph-backward-page.svg\"/> Voltar\r\n                </button>\r\n            </form>\r\n        </div>\r\n\r\n    </div>\r\n</app-servico-card>"
 
 /***/ }),
 
@@ -2214,13 +2161,19 @@ var ServicoService = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `.angular-cli.json`.
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false
 };
+/*
+ * In development mode, to ignore zone related error stack frames such as
+ * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
+ * import the following file, but please comment it out in production mode
+ * because it will have performance impact when throw error
+ */
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 
 
 /***/ }),
@@ -2258,7 +2211,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Desenvolvedor PHP\www\srcp\srcp-angular\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Desenvolvedor PHP\www\srcp\srcp-angular6\src\main.ts */"./src/main.ts");
 
 
 /***/ })

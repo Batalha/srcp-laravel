@@ -47,7 +47,7 @@ class ChamadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Chamado::create($request->all());
     }
 
     /**

@@ -17,7 +17,11 @@ class Chamado extends Model
         'cliente_id',
         'data_inicial',
         'data_final',
-        'status'
+        'status',
+        'descricao',
+        'defeito',
+        'observacao',
+        'laudo'
     ];
 
 
