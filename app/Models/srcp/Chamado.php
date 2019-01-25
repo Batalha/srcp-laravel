@@ -14,6 +14,7 @@ class Chamado extends Model
     ];
 
     protected $fillable = [
+        'id',
         'cliente_id',
         'data_inicial',
         'data_final',
@@ -29,5 +30,9 @@ class Chamado extends Model
 
     public function cliente(){
         return $this->belongsTo(Cliente::class);
+    }
+
+    public function servicos(){
+        return $this->belongsToMany(Servico::class);
     }
 }
