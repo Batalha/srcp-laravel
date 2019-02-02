@@ -25,6 +25,7 @@ Route::group(['middleware'=>'jwt.auth','prefix' => 'srcp'], function () {
 
     Route::post('login',  'Api\AuthController@login');
     Route::post('refresh',  'Api\AuthController@refresh');
+    Route::put('srcp/trocar_senha/{id}',  'Api\AuthController@update');
     Route::get('logout',  'Api\AuthController@logout');
 
     Route::get('home', 'HomeController@index')->name('home');
