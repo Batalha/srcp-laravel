@@ -11,9 +11,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\User::class)->create([
-           'name' => 'Celio Batalha',
-           'email' => 'admin@admin.com'
-        ]);
+        factory(\App\User::class)->create(['name' => 'Admin','email' => 'admin@admin.com']);
+        factory(\App\User::class)->create(['name' => 'Usuario','email' => 'usuario@usuario.com']);
     }
 }
